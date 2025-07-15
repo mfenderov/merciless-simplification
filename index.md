@@ -56,7 +56,7 @@ title: "Merciless Simplification - AI Agent Framework"
 <!-- Proof -->
 <div class="bg-white border border-gray-200 rounded-lg p-6">
     <h2 class="text-xl font-semibold text-gray-900 mb-4">Real Results</h2>
-    <p class="text-gray-600 mb-4">Applied to <strong>konfig Go library</strong> in 3 hours:</p>
+    <p class="text-gray-600 mb-4">Applied to <strong><a href="https://github.com/mfenderov/konfig" class="text-blue-600 hover:text-blue-800">konfig Go library</a></strong> in 3 hours:</p>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-4">
         <div>
             <div class="text-xl font-bold text-gray-900">25%</div>
@@ -75,7 +75,8 @@ title: "Merciless Simplification - AI Agent Framework"
             <div class="text-sm text-gray-500">Broken features</div>
         </div>
     </div>
-    <div class="text-center">
-        <a href="/merciless-simplification/SIMPLIFICATION_RESULTS.html" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Complete Case Study →</a>
+    <div class="text-center space-x-4">
+        <a href="https://github.com/mfenderov/konfig" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View konfig Library →</a>
+        <a href="/merciless-simplification/SIMPLIFICATION_RESULTS.html" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Case Study Details →</a>
     </div>
 </div>
