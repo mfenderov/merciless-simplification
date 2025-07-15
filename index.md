@@ -70,12 +70,12 @@ title: "Merciless Simplification - AI Agent Framework"
 </div>
 
 <!-- Why This Works -->
-<div class="bg-gray-800 text-white rounded-lg p-6 mb-8">
-    <h2 class="text-xl font-semibold mb-4 text-gray-100">Why AI Agents Need Merciless Simplification</h2>
+<div class="bg-gray-100 border border-gray-300 rounded-lg p-6 mb-8">
+    <h2 class="text-xl font-semibold mb-4 text-gray-900">Why AI Agents Need Merciless Simplification</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
         <div>
-            <h3 class="font-medium text-red-300 mb-2">❌ Weak AI Refactoring</h3>
-            <ul class="text-gray-200 space-y-1">
+            <h3 class="font-medium text-red-700 mb-2">❌ Weak AI Refactoring</h3>
+            <ul class="text-gray-700 space-y-1">
                 <li>• Random, inconsistent decisions</li>
                 <li>• No systematic approach</li>
                 <li>• Breaks things unpredictably</li>
@@ -84,8 +84,8 @@ title: "Merciless Simplification - AI Agent Framework"
             </ul>
         </div>
         <div>
-            <h3 class="font-medium text-green-300 mb-2">⚔️ Merciless AI Simplification</h3>
-            <ul class="text-gray-200 space-y-1">
+            <h3 class="font-medium text-green-700 mb-2">⚔️ Merciless AI Simplification</h3>
+            <ul class="text-gray-700 space-y-1">
                 <li>• Systematic elimination criteria</li>
                 <li>• Proven patterns and safety</li>
                 <li>• Ruthless but controlled</li>
