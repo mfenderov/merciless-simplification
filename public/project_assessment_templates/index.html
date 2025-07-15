@@ -1,237 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
-<head><script src="/merciless-simplification/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=merciless-simplification/livereload" data-no-instant defer></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Merciless Simplification Methodology</title>
-    <meta name="description" content="">
-    
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#3b82f6',
-                        'primary-dark': '#1d4ed8',
-                        'secondary': '#10b981',
-                        'accent': '#f59e0b',
-                        'danger': '#ef4444',
-                        'muted': '#6b7280'
-                    }
-                }
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Merciless Simplification</title>
+<meta name="keywords" content="">
+<meta name="description" content="Project Assessment Templates
+
+Purpose: Ready-to-use templates for assessing different types of projects for simplification opportunities.
+Universal Project Assessment Template
+Project Information
+
+Project Name: _________________
+Language/Framework: _________________
+Team Size: _____ developers
+Age: _____ months/years
+Active Development: Yes/No
+Assessment Date: _________________
+Assessment Duration: _____ minutes
+
+Project Metrics (Baseline)
+# Commands to collect baseline metrics
+find . -name &#34;*test*&#34; | wc -l                    # Test files
+find . -name &#34;*.md&#34; | wc -l                      # Documentation files
+find . -name &#34;*.js&#34; -o -name &#34;*.go&#34; -o -name &#34;*.py&#34; | grep -v test | wc -l  # Source files
+wc -l *test* 2&gt;/dev/null | tail -1               # Test lines
+wc -l *.md 2&gt;/dev/null | tail -1                 # Documentation lines
+
+Test files: _____ files (_____ lines)
+Documentation files: _____ files (_____ lines)
+Source files: _____ files (_____ lines)
+Build/config files: _____ files
+Total repository size: _____ MB
+
+Quick Health Check
+
+ All tests pass (100% success rate)
+ Build completes without errors
+ Documentation examples work
+ No obvious broken functionality
+ Git repository is clean (no uncommitted changes)
+
+
+Frontend Project Template (React/Vue/Angular)
+Frontend-Specific Metrics
+
+Components: _____ total components
+Test files: _____ files
+
+Unit tests: _____ files
+Integration tests: _____ files
+E2E tests: _____ files
+
+
+Documentation: _____ files
+
+Component docs: _____ files
+API docs: _____ files
+User guides: _____ files
+
+
+
+Component Analysis
+# Frontend-specific commands
+find ./src/components -name &#34;*.tsx&#34; -o -name &#34;*.vue&#34; -o -name &#34;*.js&#34; | wc -l
+find . -name &#34;*.test.js&#34; -o -name &#34;*.spec.js&#34; | wc -l
+find . -name &#34;*.stories.js&#34; | wc -l              # Storybook stories
+Component Complexity Assessment
+Large Components (&gt;200 lines):">
+<meta name="author" content="Mark Fenderov">
+<link rel="canonical" href="http://localhost:1313/project_assessment_templates/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/%E2%9A%94%EF%B8%8F">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/%E2%9A%94%EF%B8%8F">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/%E2%9A%94%EF%B8%8F">
+<link rel="apple-touch-icon" href="http://localhost:1313/%E2%9A%94%EF%B8%8F">
+<link rel="mask-icon" href="http://localhost:1313/%E2%9A%94%EF%B8%8F">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/project_assessment_templates/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
             }
         }
-    </script>
-    
-    
-    <style>
-        main h1 {
-            font-size: 1.875rem;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #3b82f6;
-            padding-bottom: 0.75rem;
-        }
-        main h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 1rem;
-            margin-top: 2rem;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 0.5rem;
-        }
-        main h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #374151;
-            margin-bottom: 0.75rem;
-            margin-top: 1.5rem;
-        }
-        main h4 {
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: #374151;
-            margin-bottom: 0.5rem;
-            margin-top: 1rem;
-        }
-        main p {
-            color: #4b5563;
-            margin-bottom: 1rem;
-            line-height: 1.75;
-        }
-        main blockquote {
-            background-color: #eff6ff;
-            border-left: 4px solid #3b82f6;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 0 0.25rem 0.25rem 0;
-        }
-        main blockquote p {
-            margin-bottom: 0;
-            color: #1e40af;
-            font-weight: 500;
-        }
-        main ul, main ol {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-        }
-        main li {
-            color: #4b5563;
-            margin-bottom: 0.5rem;
-        }
-        main a {
-            color: #2563eb;
-            text-decoration: underline;
-        }
-        main a:hover {
-            color: #1d4ed8;
-        }
-        main strong {
-            font-weight: 600;
-            color: #059669;
-        }
-        main code {
-            background-color: #f3f4f6;
-            padding: 0.125rem 0.5rem;
-            border-radius: 0.25rem;
-            font-size: 0.875rem;
-            font-family: ui-monospace, SFMono-Regular, monospace;
-            color: #dc2626;
-        }
-        main pre {
-            background-color: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.375rem;
-            padding: 1rem;
-            overflow-x: auto;
-            margin: 1rem 0;
-        }
-        main pre code {
-            background-color: transparent;
-            padding: 0;
-            color: #374151;
-        }
-        main table {
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #d1d5db;
-            margin: 1rem 0;
-        }
-        main th {
-            background-color: #f9fafb;
-            border: 1px solid #d1d5db;
-            padding: 0.75rem 1rem;
-            font-weight: 600;
-            text-align: left;
-        }
-        main td {
-            border: 1px solid #d1d5db;
-            padding: 0.75rem 1rem;
-        }
+
     </style>
+</noscript>
 </head>
 
-<body class="bg-gray-50 text-gray-900">
-    
-    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <a href="http://localhost:1313/merciless-simplification/" class="text-2xl font-bold text-blue-600 hover:text-blue-800">
-                        Merciless Simplification
-                    </a>
-                    <span class="ml-3 px-2 py-1 bg-blue-600 text-white text-xs rounded-full">🤖 AI Framework</span>
-                </div>
-                
-                
-                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Merciless Simplification (Alt + H)">Merciless Simplification</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                
-                
-                <nav class="hidden md:flex space-x-6">
-                    
-                    
-                        <a href="/merciless-simplification/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                    
-                        <a href="/merciless-simplification/ai_agent_usage_guide/" class="text-gray-700 hover:text-blue-600 font-medium">AI Guide</a>
-                    
-                        <a href="/merciless-simplification/simplification_patterns/" class="text-gray-700 hover:text-blue-600 font-medium">Patterns</a>
-                    
-                        <a href="/merciless-simplification/simplification_results/" class="text-gray-700 hover:text-blue-600 font-medium">Case Study</a>
-                    
-                        <a href="https://github.com/mfenderov/merciless-simplification" class="text-gray-700 hover:text-blue-600 font-medium">GitHub</a>
-                    
-                </nav>
-            </div>
-            
-            
-            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 py-4">
-                <nav class="flex flex-col space-y-2">
-                    
-                        <a href="/merciless-simplification/" class="text-gray-700 hover:text-blue-600 font-medium py-2">Home</a>
-                    
-                        <a href="/merciless-simplification/ai_agent_usage_guide/" class="text-gray-700 hover:text-blue-600 font-medium py-2">AI Guide</a>
-                    
-                        <a href="/merciless-simplification/simplification_patterns/" class="text-gray-700 hover:text-blue-600 font-medium py-2">Patterns</a>
-                    
-                        <a href="/merciless-simplification/simplification_results/" class="text-gray-700 hover:text-blue-600 font-medium py-2">Case Study</a>
-                    
-                        <a href="https://github.com/mfenderov/merciless-simplification" class="text-gray-700 hover:text-blue-600 font-medium py-2">GitHub</a>
-                    
-                </nav>
             </div>
         </div>
-    </header>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/ai_agent_usage_guide/" title="AI Guide">
+                    <span>AI Guide</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/simplification_patterns/" title="Patterns">
+                    <span>Patterns</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/simplification_results/" title="Case Study">
+                    <span>Case Study</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/mfenderov/merciless-simplification" title="GitHub">
+                    <span>GitHub</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="flex flex-col lg:flex-row gap-8">
-            
-            <aside class="lg:w-64 flex-shrink-0">
-                <div class="bg-white rounded-lg shadow-sm p-6 sticky top-24">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Navigation</h3>
-                    <nav class="space-y-3 text-sm">
-                        <div class="pb-3 border-b border-gray-200">
-                            <p class="font-medium text-blue-600 mb-2">🤖 AI Agent</p>
-                            <a href="/merciless-simplification/AI_AGENT_USAGE_GUIDE/" class="text-gray-600 hover:text-blue-600 block">Usage Guide</a>
-                        </div>
-                        <div class="pb-3 border-b border-gray-200">
-                            <p class="font-medium text-gray-700 mb-2">📋 Framework</p>
-                            <ul class="space-y-1">
-                                <li><a href="/merciless-simplification/SIMPLIFICATION_PATTERNS/" class="text-gray-600 hover:text-blue-600 block">11 Patterns</a></li>
-                                <li><a href="/merciless-simplification/COMPLETE_SIMPLIFICATION_PLAYBOOK/" class="text-gray-600 hover:text-blue-600 block">Complete Playbook</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="font-medium text-gray-700 mb-2">📊 Results</p>
-                            <ul class="space-y-1">
-                                <li><a href="/merciless-simplification/SIMPLIFICATION_RESULTS/" class="text-gray-600 hover:text-blue-600 block">Case Study Results</a></li>
-                                <li><a href="https://github.com/mfenderov/konfig" class="text-gray-600 hover:text-blue-600 block">Konfig Library</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </aside>
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a></div>
+    <h1 class="post-title entry-hint-parent">
+      
+    </h1>
+    <div class="post-meta">6 min&nbsp;·&nbsp;Mark Fenderov
 
-            
-            <main class="flex-1 bg-white rounded-lg shadow-sm">
-                <div class="p-8">
-                    <div class="max-w-4xl mx-auto">
-                        
-<h1 id="project-assessment-templates">Project Assessment Templates</h1>
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#universal-project-assessment-template">Universal Project Assessment Template</a>
+      <ul>
+        <li><a href="#project-information">Project Information</a></li>
+        <li><a href="#project-metrics-baseline">Project Metrics (Baseline)</a></li>
+        <li><a href="#quick-health-check">Quick Health Check</a></li>
+      </ul>
+    </li>
+    <li><a href="#frontend-project-template-reactvueangular">Frontend Project Template (React/Vue/Angular)</a>
+      <ul>
+        <li><a href="#frontend-specific-metrics">Frontend-Specific Metrics</a></li>
+        <li><a href="#component-analysis">Component Analysis</a></li>
+        <li><a href="#test-analysis">Test Analysis</a></li>
+        <li><a href="#package-dependencies">Package Dependencies</a></li>
+        <li><a href="#frontend-simplification-targets">Frontend Simplification Targets</a></li>
+      </ul>
+    </li>
+    <li><a href="#backend-api-project-template-gonodejspython">Backend API Project Template (Go/Node.js/Python)</a>
+      <ul>
+        <li><a href="#backend-specific-metrics">Backend-Specific Metrics</a></li>
+        <li><a href="#api-complexity-assessment">API Complexity Assessment</a></li>
+        <li><a href="#database--orm-analysis">Database &amp; ORM Analysis</a></li>
+        <li><a href="#test-categories">Test Categories</a></li>
+        <li><a href="#backend-simplification-targets">Backend Simplification Targets</a></li>
+      </ul>
+    </li>
+    <li><a href="#full-stack-project-template">Full-Stack Project Template</a>
+      <ul>
+        <li><a href="#full-stack-complexity-assessment">Full-Stack Complexity Assessment</a></li>
+        <li><a href="#integration-complexity">Integration Complexity</a></li>
+        <li><a href="#monorepo-vs-multi-repo-assessment">Monorepo vs Multi-repo Assessment</a></li>
+        <li><a href="#full-stack-simplification-opportunities">Full-Stack Simplification Opportunities</a></li>
+      </ul>
+    </li>
+    <li><a href="#librarypackage-project-template">Library/Package Project Template</a>
+      <ul>
+        <li><a href="#library-specific-metrics">Library-Specific Metrics</a></li>
+        <li><a href="#api-surface-analysis">API Surface Analysis</a></li>
+        <li><a href="#documentation-complexity">Documentation Complexity</a></li>
+        <li><a href="#test-categories-for-libraries">Test Categories for Libraries</a></li>
+        <li><a href="#library-simplification-targets">Library Simplification Targets</a></li>
+      </ul>
+    </li>
+    <li><a href="#legacy-project-template">Legacy Project Template</a>
+      <ul>
+        <li><a href="#legacy-assessment-considerations">Legacy Assessment Considerations</a></li>
+        <li><a href="#legacy-specific-risks">Legacy-Specific Risks</a></li>
+        <li><a href="#legacy-simplification-strategy">Legacy Simplification Strategy</a></li>
+        <li><a href="#risk-mitigation-for-legacy">Risk Mitigation for Legacy</a></li>
+      </ul>
+    </li>
+    <li><a href="#assessment-results-summary-template">Assessment Results Summary Template</a>
+      <ul>
+        <li><a href="#project-_________________">Project: _________________</a></li>
+        <li><a href="#assessment-date-_________________">Assessment Date: _________________</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="project-assessment-templates">Project Assessment Templates<a hidden class="anchor" aria-hidden="true" href="#project-assessment-templates">#</a></h1>
 <blockquote>
 <p><strong>Purpose</strong>: Ready-to-use templates for assessing different types of projects for simplification opportunities.</p></blockquote>
-<h2 id="universal-project-assessment-template">Universal Project Assessment Template</h2>
-<h3 id="project-information">Project Information</h3>
+<h2 id="universal-project-assessment-template">Universal Project Assessment Template<a hidden class="anchor" aria-hidden="true" href="#universal-project-assessment-template">#</a></h2>
+<h3 id="project-information">Project Information<a hidden class="anchor" aria-hidden="true" href="#project-information">#</a></h3>
 <ul>
 <li><strong>Project Name</strong>: _________________</li>
 <li><strong>Language/Framework</strong>: _________________</li>
@@ -241,7 +289,7 @@
 <li><strong>Assessment Date</strong>: _________________</li>
 <li><strong>Assessment Duration</strong>: _____ minutes</li>
 </ul>
-<h3 id="project-metrics-baseline">Project Metrics (Baseline)</h3>
+<h3 id="project-metrics-baseline">Project Metrics (Baseline)<a hidden class="anchor" aria-hidden="true" href="#project-metrics-baseline">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Commands to collect baseline metrics</span>
 </span></span><span style="display:flex;"><span>find . -name <span style="color:#0a3069">&#34;*test*&#34;</span> <span style="color:#1f2328">|</span> wc -l                    <span style="color:#57606a"># Test files</span>
 </span></span><span style="display:flex;"><span>find . -name <span style="color:#0a3069">&#34;*.md&#34;</span> <span style="color:#1f2328">|</span> wc -l                      <span style="color:#57606a"># Documentation files</span>
@@ -255,7 +303,7 @@
 <li><strong>Build/config files</strong>: _____ files</li>
 <li><strong>Total repository size</strong>: _____ MB</li>
 </ul>
-<h3 id="quick-health-check">Quick Health Check</h3>
+<h3 id="quick-health-check">Quick Health Check<a hidden class="anchor" aria-hidden="true" href="#quick-health-check">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> All tests pass (100% success rate)</li>
 <li><input disabled="" type="checkbox"> Build completes without errors</li>
@@ -264,8 +312,8 @@
 <li><input disabled="" type="checkbox"> Git repository is clean (no uncommitted changes)</li>
 </ul>
 <hr>
-<h2 id="frontend-project-template-reactvueangular">Frontend Project Template (React/Vue/Angular)</h2>
-<h3 id="frontend-specific-metrics">Frontend-Specific Metrics</h3>
+<h2 id="frontend-project-template-reactvueangular">Frontend Project Template (React/Vue/Angular)<a hidden class="anchor" aria-hidden="true" href="#frontend-project-template-reactvueangular">#</a></h2>
+<h3 id="frontend-specific-metrics">Frontend-Specific Metrics<a hidden class="anchor" aria-hidden="true" href="#frontend-specific-metrics">#</a></h3>
 <ul>
 <li><strong>Components</strong>: _____ total components</li>
 <li><strong>Test files</strong>: _____ files
@@ -283,12 +331,12 @@
 </ul>
 </li>
 </ul>
-<h3 id="component-analysis">Component Analysis</h3>
+<h3 id="component-analysis">Component Analysis<a hidden class="anchor" aria-hidden="true" href="#component-analysis">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Frontend-specific commands</span>
 </span></span><span style="display:flex;"><span>find ./src/components -name <span style="color:#0a3069">&#34;*.tsx&#34;</span> -o -name <span style="color:#0a3069">&#34;*.vue&#34;</span> -o -name <span style="color:#0a3069">&#34;*.js&#34;</span> <span style="color:#1f2328">|</span> wc -l
 </span></span><span style="display:flex;"><span>find . -name <span style="color:#0a3069">&#34;*.test.js&#34;</span> -o -name <span style="color:#0a3069">&#34;*.spec.js&#34;</span> <span style="color:#1f2328">|</span> wc -l
 </span></span><span style="display:flex;"><span>find . -name <span style="color:#0a3069">&#34;*.stories.js&#34;</span> <span style="color:#1f2328">|</span> wc -l              <span style="color:#57606a"># Storybook stories</span>
-</span></span></code></pre></div><h4 id="component-complexity-assessment">Component Complexity Assessment</h4>
+</span></span></code></pre></div><h4 id="component-complexity-assessment">Component Complexity Assessment<a hidden class="anchor" aria-hidden="true" href="#component-complexity-assessment">#</a></h4>
 <p><strong>Large Components (&gt;200 lines)</strong>:</p>
 <ol>
 <li>_________________ (_____ lines) - <strong>Simplification Score</strong>: ⭐⭐⭐⭐⭐</li>
@@ -307,7 +355,7 @@
 <li><input disabled="" type="checkbox"> _________________ (wraps: _________________)</li>
 <li><input disabled="" type="checkbox"> _________________ (wraps: _________________)</li>
 </ul>
-<h3 id="test-analysis">Test Analysis</h3>
+<h3 id="test-analysis">Test Analysis<a hidden class="anchor" aria-hidden="true" href="#test-analysis">#</a></h3>
 <p><strong>Test Categories</strong>:</p>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Snapshot tests</strong>: _____ files (often brittle, elimination candidates)</li>
@@ -322,7 +370,7 @@
 <li><input disabled="" type="checkbox"> Tests that duplicate framework behavior</li>
 <li><input disabled="" type="checkbox"> Complex test setup for simple component behavior</li>
 </ul>
-<h3 id="package-dependencies">Package Dependencies</h3>
+<h3 id="package-dependencies">Package Dependencies<a hidden class="anchor" aria-hidden="true" href="#package-dependencies">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Check package complexity</span>
 </span></span><span style="display:flex;"><span>npm ls --depth<span style="color:#0550ae">=</span><span style="color:#0550ae">0</span> <span style="color:#1f2328">|</span> wc -l                         <span style="color:#57606a"># Direct dependencies</span>
 </span></span><span style="display:flex;"><span>npm ls --all <span style="color:#1f2328">|</span> wc -l                             <span style="color:#57606a"># All dependencies</span>
@@ -333,7 +381,7 @@
 <li><strong>Unused dependencies</strong>: _____ packages (elimination candidates)</li>
 <li><strong>Dev dependencies</strong>: _____ packages</li>
 </ul>
-<h3 id="frontend-simplification-targets">Frontend Simplification Targets</h3>
+<h3 id="frontend-simplification-targets">Frontend Simplification Targets<a hidden class="anchor" aria-hidden="true" href="#frontend-simplification-targets">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Component consolidation</strong>: _____ components → _____ components (____% reduction)</li>
 <li><input disabled="" type="checkbox"> <strong>Test simplification</strong>: _____ test files → _____ test files (____% reduction)</li>
@@ -341,8 +389,8 @@
 <li><input disabled="" type="checkbox"> <strong>Documentation streamlining</strong>: _____ docs → _____ docs (____% reduction)</li>
 </ul>
 <hr>
-<h2 id="backend-api-project-template-gonodejspython">Backend API Project Template (Go/Node.js/Python)</h2>
-<h3 id="backend-specific-metrics">Backend-Specific Metrics</h3>
+<h2 id="backend-api-project-template-gonodejspython">Backend API Project Template (Go/Node.js/Python)<a hidden class="anchor" aria-hidden="true" href="#backend-api-project-template-gonodejspython">#</a></h2>
+<h3 id="backend-specific-metrics">Backend-Specific Metrics<a hidden class="anchor" aria-hidden="true" href="#backend-specific-metrics">#</a></h3>
 <ul>
 <li><strong>API endpoints</strong>: _____ total endpoints</li>
 <li><strong>Models/entities</strong>: _____ files</li>
@@ -350,7 +398,7 @@
 <li><strong>Repository/DAO files</strong>: _____ files</li>
 <li><strong>Middleware files</strong>: _____ files</li>
 </ul>
-<h3 id="api-complexity-assessment">API Complexity Assessment</h3>
+<h3 id="api-complexity-assessment">API Complexity Assessment<a hidden class="anchor" aria-hidden="true" href="#api-complexity-assessment">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Backend-specific commands</span>
 </span></span><span style="display:flex;"><span>grep -r <span style="color:#0a3069">&#34;func.*Handler\|@app.route\|app.get\|app.post&#34;</span> . <span style="color:#1f2328">|</span> wc -l  <span style="color:#57606a"># API endpoints</span>
 </span></span><span style="display:flex;"><span>find . -name <span style="color:#0a3069">&#34;*_test.go&#34;</span> -o -name <span style="color:#0a3069">&#34;*test.py&#34;</span> -o -name <span style="color:#0a3069">&#34;*.test.js&#34;</span> <span style="color:#1f2328">|</span> wc -l
@@ -368,21 +416,21 @@
 <li><input disabled="" type="checkbox"> <strong>Unnecessary abstractions</strong>: _________________</li>
 <li><input disabled="" type="checkbox"> <strong>Over-engineered patterns</strong>: _________________</li>
 </ul>
-<h3 id="database--orm-analysis">Database &amp; ORM Analysis</h3>
+<h3 id="database--orm-analysis">Database &amp; ORM Analysis<a hidden class="anchor" aria-hidden="true" href="#database--orm-analysis">#</a></h3>
 <ul>
 <li><strong>Database migrations</strong>: _____ files</li>
 <li><strong>Model files</strong>: _____ files</li>
 <li><strong>Query complexity</strong>: Simple/Medium/Complex</li>
 <li><strong>ORM abstraction layers</strong>: _____ layers (potential over-engineering)</li>
 </ul>
-<h3 id="test-categories">Test Categories</h3>
+<h3 id="test-categories">Test Categories<a hidden class="anchor" aria-hidden="true" href="#test-categories">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Unit tests</strong>: _____ files (business logic - usually keep)</li>
 <li><input disabled="" type="checkbox"> <strong>Integration tests</strong>: _____ files (API contracts - usually keep)</li>
 <li><input disabled="" type="checkbox"> <strong>Mock-heavy tests</strong>: _____ files (potential over-engineering)</li>
 <li><input disabled="" type="checkbox"> <strong>Database tests</strong>: _____ files (infrastructure vs business logic?)</li>
 </ul>
-<h3 id="backend-simplification-targets">Backend Simplification Targets</h3>
+<h3 id="backend-simplification-targets">Backend Simplification Targets<a hidden class="anchor" aria-hidden="true" href="#backend-simplification-targets">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>API consolidation</strong>: _____ endpoints → _____ endpoints (____% reduction)</li>
 <li><input disabled="" type="checkbox"> <strong>Service simplification</strong>: _____ services → _____ services (____% reduction)</li>
@@ -390,8 +438,8 @@
 <li><input disabled="" type="checkbox"> <strong>Abstraction reduction</strong>: Remove _____ unnecessary layers</li>
 </ul>
 <hr>
-<h2 id="full-stack-project-template">Full-Stack Project Template</h2>
-<h3 id="full-stack-complexity-assessment">Full-Stack Complexity Assessment</h3>
+<h2 id="full-stack-project-template">Full-Stack Project Template<a hidden class="anchor" aria-hidden="true" href="#full-stack-project-template">#</a></h2>
+<h3 id="full-stack-complexity-assessment">Full-Stack Complexity Assessment<a hidden class="anchor" aria-hidden="true" href="#full-stack-complexity-assessment">#</a></h3>
 <ul>
 <li><strong>Frontend components</strong>: _____ files</li>
 <li><strong>Backend services</strong>: _____ files</li>
@@ -399,14 +447,14 @@
 <li><strong>API integration points</strong>: _____ connections</li>
 <li><strong>Database entities</strong>: _____ models</li>
 </ul>
-<h3 id="integration-complexity">Integration Complexity</h3>
+<h3 id="integration-complexity">Integration Complexity<a hidden class="anchor" aria-hidden="true" href="#integration-complexity">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>API client generation</strong>: Auto-generated/Manual (auto is usually simpler)</li>
 <li><input disabled="" type="checkbox"> <strong>Type sharing</strong>: Shared types/Duplicate types (shared is usually simpler)</li>
 <li><input disabled="" type="checkbox"> <strong>Build processes</strong>: _____ separate builds (consolidation opportunity?)</li>
 <li><input disabled="" type="checkbox"> <strong>Testing strategies</strong>: _____ different test approaches (unification opportunity?)</li>
 </ul>
-<h3 id="monorepo-vs-multi-repo-assessment">Monorepo vs Multi-repo Assessment</h3>
+<h3 id="monorepo-vs-multi-repo-assessment">Monorepo vs Multi-repo Assessment<a hidden class="anchor" aria-hidden="true" href="#monorepo-vs-multi-repo-assessment">#</a></h3>
 <p><strong>Current Structure</strong>: Monorepo/Multi-repo
 <strong>Complexity Indicators</strong>:</p>
 <ul>
@@ -415,7 +463,7 @@
 <li><input disabled="" type="checkbox"> <strong>Complex build orchestration</strong></li>
 <li><input disabled="" type="checkbox"> <strong>Shared code management issues</strong></li>
 </ul>
-<h3 id="full-stack-simplification-opportunities">Full-Stack Simplification Opportunities</h3>
+<h3 id="full-stack-simplification-opportunities">Full-Stack Simplification Opportunities<a hidden class="anchor" aria-hidden="true" href="#full-stack-simplification-opportunities">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Unified tooling</strong>: Consolidate build/test/lint configurations</li>
 <li><input disabled="" type="checkbox"> <strong>Shared type definitions</strong>: Eliminate type duplication</li>
@@ -423,15 +471,15 @@
 <li><input disabled="" type="checkbox"> <strong>Test strategy unification</strong>: Consistent testing approaches</li>
 </ul>
 <hr>
-<h2 id="librarypackage-project-template">Library/Package Project Template</h2>
-<h3 id="library-specific-metrics">Library-Specific Metrics</h3>
+<h2 id="librarypackage-project-template">Library/Package Project Template<a hidden class="anchor" aria-hidden="true" href="#librarypackage-project-template">#</a></h2>
+<h3 id="library-specific-metrics">Library-Specific Metrics<a hidden class="anchor" aria-hidden="true" href="#library-specific-metrics">#</a></h3>
 <ul>
 <li><strong>Public API functions</strong>: _____ functions</li>
 <li><strong>Internal helper functions</strong>: _____ functions</li>
 <li><strong>Example files</strong>: _____ files</li>
 <li><strong>Documentation pages</strong>: _____ files</li>
 </ul>
-<h3 id="api-surface-analysis">API Surface Analysis</h3>
+<h3 id="api-surface-analysis">API Surface Analysis<a hidden class="anchor" aria-hidden="true" href="#api-surface-analysis">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Library-specific commands</span>
 </span></span><span style="display:flex;"><span>grep -r <span style="color:#0a3069">&#34;export\|public\|func [A-Z]&#34;</span> . <span style="color:#1f2328">|</span> grep -v <span style="color:#6639ba">test</span> <span style="color:#1f2328">|</span> wc -l  <span style="color:#57606a"># Public functions</span>
 </span></span></code></pre></div><p><strong>Public API Assessment</strong>:</p>
@@ -441,7 +489,7 @@
 <li><input disabled="" type="checkbox"> <strong>Utility functions</strong> (helpers): _____ functions</li>
 <li><input disabled="" type="checkbox"> <strong>Deprecated functions</strong> (removal candidates): _____ functions</li>
 </ul>
-<h3 id="documentation-complexity">Documentation Complexity</h3>
+<h3 id="documentation-complexity">Documentation Complexity<a hidden class="anchor" aria-hidden="true" href="#documentation-complexity">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Getting started guide</strong>: _____ pages</li>
 <li><input disabled="" type="checkbox"> <strong>API reference</strong>: _____ pages</li>
@@ -455,14 +503,14 @@
 <li><input disabled="" type="checkbox"> <strong>Outdated documentation</strong>: _____</li>
 <li><input disabled="" type="checkbox"> <strong>Over-detailed explanations</strong>: _____</li>
 </ul>
-<h3 id="test-categories-for-libraries">Test Categories for Libraries</h3>
+<h3 id="test-categories-for-libraries">Test Categories for Libraries<a hidden class="anchor" aria-hidden="true" href="#test-categories-for-libraries">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Unit tests</strong>: _____ files (business logic - essential)</li>
 <li><input disabled="" type="checkbox"> <strong>Integration tests</strong>: _____ files (usage scenarios - important)</li>
 <li><input disabled="" type="checkbox"> <strong>Performance benchmarks</strong>: _____ files (realistic vs edge cases?)</li>
 <li><input disabled="" type="checkbox"> <strong>Compatibility tests</strong>: _____ files (multiple versions/environments)</li>
 </ul>
-<h3 id="library-simplification-targets">Library Simplification Targets</h3>
+<h3 id="library-simplification-targets">Library Simplification Targets<a hidden class="anchor" aria-hidden="true" href="#library-simplification-targets">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>API consolidation</strong>: _____ functions → _____ functions (____% reduction)</li>
 <li><input disabled="" type="checkbox"> <strong>Example streamlining</strong>: _____ examples → _____ examples (____% reduction)</li>
@@ -470,8 +518,8 @@
 <li><input disabled="" type="checkbox"> <strong>Test optimization</strong>: _____ benchmarks → _____ benchmarks (____% reduction)</li>
 </ul>
 <hr>
-<h2 id="legacy-project-template">Legacy Project Template</h2>
-<h3 id="legacy-assessment-considerations">Legacy Assessment Considerations</h3>
+<h2 id="legacy-project-template">Legacy Project Template<a hidden class="anchor" aria-hidden="true" href="#legacy-project-template">#</a></h2>
+<h3 id="legacy-assessment-considerations">Legacy Assessment Considerations<a hidden class="anchor" aria-hidden="true" href="#legacy-assessment-considerations">#</a></h3>
 <ul>
 <li><strong>Project age</strong>: _____ years</li>
 <li><strong>Last major refactor</strong>: _____ months/years ago</li>
@@ -479,14 +527,14 @@
 <li><strong>Team knowledge</strong>: Complete/Partial/Limited/Lost</li>
 <li><strong>Documentation state</strong>: Current/Outdated/Missing</li>
 </ul>
-<h3 id="legacy-specific-risks">Legacy-Specific Risks</h3>
+<h3 id="legacy-specific-risks">Legacy-Specific Risks<a hidden class="anchor" aria-hidden="true" href="#legacy-specific-risks">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Unknown dependencies</strong>: Code that might be used by external systems</li>
 <li><input disabled="" type="checkbox"> <strong>Undocumented behavior</strong>: Functions whose purpose isn&rsquo;t clear</li>
 <li><input disabled="" type="checkbox"> <strong>Historical workarounds</strong>: Code that fixes old bugs/compatibility issues</li>
 <li><input disabled="" type="checkbox"> <strong>Performance hacks</strong>: Optimizations that might be critical</li>
 </ul>
-<h3 id="legacy-simplification-strategy">Legacy Simplification Strategy</h3>
+<h3 id="legacy-simplification-strategy">Legacy Simplification Strategy<a hidden class="anchor" aria-hidden="true" href="#legacy-simplification-strategy">#</a></h3>
 <p><strong>Conservative Approach Checklist</strong>:</p>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Start with documentation</strong>: Safe wins without code changes</li>
@@ -494,7 +542,7 @@
 <li><input disabled="" type="checkbox"> <strong>Remove dead code</strong>: Use tools to identify truly unused code</li>
 <li><input disabled="" type="checkbox"> <strong>Gradual consolidation</strong>: Small, reversible changes only</li>
 </ul>
-<h3 id="risk-mitigation-for-legacy">Risk Mitigation for Legacy</h3>
+<h3 id="risk-mitigation-for-legacy">Risk Mitigation for Legacy<a hidden class="anchor" aria-hidden="true" href="#risk-mitigation-for-legacy">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Comprehensive backup</strong>: Full system backup before changes</li>
 <li><input disabled="" type="checkbox"> <strong>Feature flags</strong>: Ability to toggle old vs new behavior</li>
@@ -503,14 +551,14 @@
 <li><input disabled="" type="checkbox"> <strong>Rollback plan</strong>: Detailed procedures for reverting changes</li>
 </ul>
 <hr>
-<h2 id="assessment-results-summary-template">Assessment Results Summary Template</h2>
-<h3 id="project-_________________">Project: _________________</h3>
-<h3 id="assessment-date-_________________">Assessment Date: _________________</h3>
-<h4 id="simplification-potential-score">Simplification Potential Score</h4>
+<h2 id="assessment-results-summary-template">Assessment Results Summary Template<a hidden class="anchor" aria-hidden="true" href="#assessment-results-summary-template">#</a></h2>
+<h3 id="project-_________________">Project: _________________<a hidden class="anchor" aria-hidden="true" href="#project-_________________">#</a></h3>
+<h3 id="assessment-date-_________________">Assessment Date: _________________<a hidden class="anchor" aria-hidden="true" href="#assessment-date-_________________">#</a></h3>
+<h4 id="simplification-potential-score">Simplification Potential Score<a hidden class="anchor" aria-hidden="true" href="#simplification-potential-score">#</a></h4>
 <p><strong>Overall Complexity</strong>: ⭐⭐⭐⭐⭐ (1=simple, 5=complex)
 <strong>Simplification Opportunity</strong>: ⭐⭐⭐⭐⭐ (1=little opportunity, 5=high opportunity)
 <strong>Risk Level</strong>: ⭐⭐⭐⭐⭐ (1=low risk, 5=high risk)</p>
-<h4 id="recommended-approach">Recommended Approach</h4>
+<h4 id="recommended-approach">Recommended Approach<a hidden class="anchor" aria-hidden="true" href="#recommended-approach">#</a></h4>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Aggressive simplification</strong> (high opportunity, low risk)</li>
 <li><input disabled="" type="checkbox"> <strong>Targeted simplification</strong> (medium opportunity/risk)</li>
@@ -518,7 +566,7 @@
 <li><input disabled="" type="checkbox"> <strong>Documentation-first</strong> (unclear codebase state)</li>
 <li><input disabled="" type="checkbox"> <strong>Defer simplification</strong> (low opportunity or very high risk)</li>
 </ul>
-<h4 id="expected-results">Expected Results</h4>
+<h4 id="expected-results">Expected Results<a hidden class="anchor" aria-hidden="true" href="#expected-results">#</a></h4>
 <ul>
 <li><strong>File reduction</strong>: ____% fewer files</li>
 <li><strong>Line reduction</strong>: ____% fewer lines</li>
@@ -526,7 +574,7 @@
 <li><strong>Time investment</strong>: _____ hours over _____ sessions</li>
 <li><strong>Risk level</strong>: _____ (mitigation strategies identified)</li>
 </ul>
-<h4 id="next-steps">Next Steps</h4>
+<h4 id="next-steps">Next Steps<a hidden class="anchor" aria-hidden="true" href="#next-steps">#</a></h4>
 <ol>
 <li>
 <hr>
@@ -538,7 +586,7 @@
 <hr>
 </li>
 </ol>
-<h4 id="success-criteria">Success Criteria</h4>
+<h4 id="success-criteria">Success Criteria<a hidden class="anchor" aria-hidden="true" href="#success-criteria">#</a></h4>
 <ul>
 <li><input disabled="" type="checkbox"> _________________</li>
 <li><input disabled="" type="checkbox"> _________________</li>
@@ -547,48 +595,132 @@
 <p>These templates provide systematic assessment for any project type, ensuring comprehensive evaluation and appropriate simplification strategies.</p>
 
 
-                    </div>
-                </div>
-            </main>
-        </div>
-    </div>
+  </div>
 
-    
-    <footer class="bg-white border-t border-gray-200 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Merciless Simplification</h3>
-                    <p class="text-gray-600 text-sm">AI Agent Framework for systematically eliminating code complexity while preserving 100% functionality.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="/merciless-simplification/AI_AGENT_USAGE_GUIDE/" class="hover:text-blue-600">AI Guide</a></li>
-                        <li><a href="/merciless-simplification/SIMPLIFICATION_PATTERNS/" class="hover:text-blue-600">11 Patterns</a></li>
-                        <li><a href="/merciless-simplification/SIMPLIFICATION_RESULTS/" class="hover:text-blue-600">Case Study Results</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Resources</h3>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="https://github.com/mfenderov/merciless-simplification" class="hover:text-blue-600">GitHub Repository</a></li>
-                        <li><a href="https://github.com/mfenderov/konfig" class="hover:text-blue-600">Konfig Library</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-500">
-                <p>&copy; 2025 Merciless Simplification Methodology. Open source and freely available.</p>
-            </div>
-        </div>
-    </footer>
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
 
+  </footer>
+</article>
+    </main>
     
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Merciless Simplification</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
         });
-    </script>
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
 </body>
+
 </html>

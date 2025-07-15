@@ -1,238 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
-<head><script src="/merciless-simplification/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=merciless-simplification/livereload" data-no-instant defer></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Merciless Simplification Methodology</title>
-    <meta name="description" content="">
-    
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#3b82f6',
-                        'primary-dark': '#1d4ed8',
-                        'secondary': '#10b981',
-                        'accent': '#f59e0b',
-                        'danger': '#ef4444',
-                        'muted': '#6b7280'
-                    }
-                }
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Merciless Simplification</title>
+<meta name="keywords" content="">
+<meta name="description" content="Risk Mitigation Strategies for Simplification
+
+Philosophy: Simplification should improve systems, not break them. Every risk must be identified, assessed, and mitigated before proceeding.
+Risk Categories &amp; Mitigation
+1. Functionality Loss Risks
+Risk: Removing Components That Are Actually Used
+Probability: Medium
+Impact: High
+Mitigation Strategy:
+Prevention:
+
+ Usage analysis: Grep codebase for all references to component
+ External dependency check: Search for usage in external projects/packages
+ Documentation review: Check if component is mentioned in public docs
+ Team consultation: Ask developers if they&rsquo;ve used the component recently
+
+Detection:">
+<meta name="author" content="Mark Fenderov">
+<link rel="canonical" href="http://localhost:1313/risk_mitigation_strategies/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/%E2%9A%94%EF%B8%8F">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/%E2%9A%94%EF%B8%8F">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/%E2%9A%94%EF%B8%8F">
+<link rel="apple-touch-icon" href="http://localhost:1313/%E2%9A%94%EF%B8%8F">
+<link rel="mask-icon" href="http://localhost:1313/%E2%9A%94%EF%B8%8F">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/risk_mitigation_strategies/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
             }
         }
-    </script>
-    
-    
-    <style>
-        main h1 {
-            font-size: 1.875rem;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #3b82f6;
-            padding-bottom: 0.75rem;
-        }
-        main h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 1rem;
-            margin-top: 2rem;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 0.5rem;
-        }
-        main h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #374151;
-            margin-bottom: 0.75rem;
-            margin-top: 1.5rem;
-        }
-        main h4 {
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: #374151;
-            margin-bottom: 0.5rem;
-            margin-top: 1rem;
-        }
-        main p {
-            color: #4b5563;
-            margin-bottom: 1rem;
-            line-height: 1.75;
-        }
-        main blockquote {
-            background-color: #eff6ff;
-            border-left: 4px solid #3b82f6;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 0 0.25rem 0.25rem 0;
-        }
-        main blockquote p {
-            margin-bottom: 0;
-            color: #1e40af;
-            font-weight: 500;
-        }
-        main ul, main ol {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-        }
-        main li {
-            color: #4b5563;
-            margin-bottom: 0.5rem;
-        }
-        main a {
-            color: #2563eb;
-            text-decoration: underline;
-        }
-        main a:hover {
-            color: #1d4ed8;
-        }
-        main strong {
-            font-weight: 600;
-            color: #059669;
-        }
-        main code {
-            background-color: #f3f4f6;
-            padding: 0.125rem 0.5rem;
-            border-radius: 0.25rem;
-            font-size: 0.875rem;
-            font-family: ui-monospace, SFMono-Regular, monospace;
-            color: #dc2626;
-        }
-        main pre {
-            background-color: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.375rem;
-            padding: 1rem;
-            overflow-x: auto;
-            margin: 1rem 0;
-        }
-        main pre code {
-            background-color: transparent;
-            padding: 0;
-            color: #374151;
-        }
-        main table {
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #d1d5db;
-            margin: 1rem 0;
-        }
-        main th {
-            background-color: #f9fafb;
-            border: 1px solid #d1d5db;
-            padding: 0.75rem 1rem;
-            font-weight: 600;
-            text-align: left;
-        }
-        main td {
-            border: 1px solid #d1d5db;
-            padding: 0.75rem 1rem;
-        }
+
     </style>
+</noscript>
 </head>
 
-<body class="bg-gray-50 text-gray-900">
-    
-    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <a href="http://localhost:1313/merciless-simplification/" class="text-2xl font-bold text-blue-600 hover:text-blue-800">
-                        Merciless Simplification
-                    </a>
-                    <span class="ml-3 px-2 py-1 bg-blue-600 text-white text-xs rounded-full">🤖 AI Framework</span>
-                </div>
-                
-                
-                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Merciless Simplification (Alt + H)">Merciless Simplification</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                
-                
-                <nav class="hidden md:flex space-x-6">
-                    
-                    
-                        <a href="/merciless-simplification/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                    
-                        <a href="/merciless-simplification/ai_agent_usage_guide/" class="text-gray-700 hover:text-blue-600 font-medium">AI Guide</a>
-                    
-                        <a href="/merciless-simplification/simplification_patterns/" class="text-gray-700 hover:text-blue-600 font-medium">Patterns</a>
-                    
-                        <a href="/merciless-simplification/simplification_results/" class="text-gray-700 hover:text-blue-600 font-medium">Case Study</a>
-                    
-                        <a href="https://github.com/mfenderov/merciless-simplification" class="text-gray-700 hover:text-blue-600 font-medium">GitHub</a>
-                    
-                </nav>
-            </div>
-            
-            
-            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 py-4">
-                <nav class="flex flex-col space-y-2">
-                    
-                        <a href="/merciless-simplification/" class="text-gray-700 hover:text-blue-600 font-medium py-2">Home</a>
-                    
-                        <a href="/merciless-simplification/ai_agent_usage_guide/" class="text-gray-700 hover:text-blue-600 font-medium py-2">AI Guide</a>
-                    
-                        <a href="/merciless-simplification/simplification_patterns/" class="text-gray-700 hover:text-blue-600 font-medium py-2">Patterns</a>
-                    
-                        <a href="/merciless-simplification/simplification_results/" class="text-gray-700 hover:text-blue-600 font-medium py-2">Case Study</a>
-                    
-                        <a href="https://github.com/mfenderov/merciless-simplification" class="text-gray-700 hover:text-blue-600 font-medium py-2">GitHub</a>
-                    
-                </nav>
             </div>
         </div>
-    </header>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/ai_agent_usage_guide/" title="AI Guide">
+                    <span>AI Guide</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/simplification_patterns/" title="Patterns">
+                    <span>Patterns</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/simplification_results/" title="Case Study">
+                    <span>Case Study</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/mfenderov/merciless-simplification" title="GitHub">
+                    <span>GitHub</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="flex flex-col lg:flex-row gap-8">
-            
-            <aside class="lg:w-64 flex-shrink-0">
-                <div class="bg-white rounded-lg shadow-sm p-6 sticky top-24">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Navigation</h3>
-                    <nav class="space-y-3 text-sm">
-                        <div class="pb-3 border-b border-gray-200">
-                            <p class="font-medium text-blue-600 mb-2">🤖 AI Agent</p>
-                            <a href="/merciless-simplification/AI_AGENT_USAGE_GUIDE/" class="text-gray-600 hover:text-blue-600 block">Usage Guide</a>
-                        </div>
-                        <div class="pb-3 border-b border-gray-200">
-                            <p class="font-medium text-gray-700 mb-2">📋 Framework</p>
-                            <ul class="space-y-1">
-                                <li><a href="/merciless-simplification/SIMPLIFICATION_PATTERNS/" class="text-gray-600 hover:text-blue-600 block">11 Patterns</a></li>
-                                <li><a href="/merciless-simplification/COMPLETE_SIMPLIFICATION_PLAYBOOK/" class="text-gray-600 hover:text-blue-600 block">Complete Playbook</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="font-medium text-gray-700 mb-2">📊 Results</p>
-                            <ul class="space-y-1">
-                                <li><a href="/merciless-simplification/SIMPLIFICATION_RESULTS/" class="text-gray-600 hover:text-blue-600 block">Case Study Results</a></li>
-                                <li><a href="https://github.com/mfenderov/konfig" class="text-gray-600 hover:text-blue-600 block">Konfig Library</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </aside>
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a></div>
+    <h1 class="post-title entry-hint-parent">
+      
+    </h1>
+    <div class="post-meta">7 min&nbsp;·&nbsp;Mark Fenderov
 
-            
-            <main class="flex-1 bg-white rounded-lg shadow-sm">
-                <div class="p-8">
-                    <div class="max-w-4xl mx-auto">
-                        
-<h1 id="risk-mitigation-strategies-for-simplification">Risk Mitigation Strategies for Simplification</h1>
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#risk-categories--mitigation">Risk Categories &amp; Mitigation</a>
+      <ul>
+        <li><a href="#1-functionality-loss-risks">1. Functionality Loss Risks</a></li>
+        <li><a href="#2-performance-degradation-risks">2. Performance Degradation Risks</a></li>
+        <li><a href="#3-test-coverage-reduction-risks">3. Test Coverage Reduction Risks</a></li>
+        <li><a href="#4-team-disruption-risks">4. Team Disruption Risks</a></li>
+      </ul>
+    </li>
+    <li><a href="#git-strategy-for-risk-management">Git Strategy for Risk Management</a>
+      <ul>
+        <li><a href="#branch-management">Branch Management</a></li>
+        <li><a href="#commit-strategy">Commit Strategy</a></li>
+        <li><a href="#rollback-procedures">Rollback Procedures</a></li>
+      </ul>
+    </li>
+    <li><a href="#testing-strategy-for-risk-mitigation">Testing Strategy for Risk Mitigation</a>
+      <ul>
+        <li><a href="#pre-simplification-testing">Pre-Simplification Testing</a></li>
+        <li><a href="#during-simplification-testing">During-Simplification Testing</a></li>
+        <li><a href="#post-simplification-validation">Post-Simplification Validation</a></li>
+      </ul>
+    </li>
+    <li><a href="#risk-assessment-matrix">Risk Assessment Matrix</a>
+      <ul>
+        <li><a href="#risk-scoring-system">Risk Scoring System</a></li>
+        <li><a href="#risk-categories-by-score">Risk Categories by Score</a></li>
+      </ul>
+    </li>
+    <li><a href="#risk-mitigation-checklist">Risk Mitigation Checklist</a>
+      <ul>
+        <li><a href="#before-starting-simplification">Before Starting Simplification</a></li>
+        <li><a href="#during-each-micro-ticket">During Each Micro-Ticket</a></li>
+        <li><a href="#after-completing-simplification">After Completing Simplification</a></li>
+      </ul>
+    </li>
+    <li><a href="#emergency-procedures">Emergency Procedures</a>
+      <ul>
+        <li><a href="#if-critical-issue-discovered">If Critical Issue Discovered</a></li>
+        <li><a href="#rollback-triggers">Rollback Triggers</a></li>
+      </ul>
+    </li>
+    <li><a href="#success-indicators-for-risk-management">Success Indicators for Risk Management</a>
+      <ul>
+        <li><a href="#green-flags-low-risk-execution">Green Flags (Low Risk Execution)</a></li>
+        <li><a href="#yellow-flags-increased-monitoring">Yellow Flags (Increased Monitoring)</a></li>
+        <li><a href="#red-flags-consider-rollback">Red Flags (Consider Rollback)</a></li>
+      </ul>
+    </li>
+    <li><a href="#risk-mitigation-tools">Risk Mitigation Tools</a>
+      <ul>
+        <li><a href="#automated-risk-detection">Automated Risk Detection</a></li>
+        <li><a href="#monitoring-scripts">Monitoring Scripts</a></li>
+        <li><a href="#risk-documentation-template">Risk Documentation Template</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="risk-mitigation-strategies-for-simplification">Risk Mitigation Strategies for Simplification<a hidden class="anchor" aria-hidden="true" href="#risk-mitigation-strategies-for-simplification">#</a></h1>
 <blockquote>
 <p><strong>Philosophy</strong>: Simplification should improve systems, not break them. Every risk must be identified, assessed, and mitigated before proceeding.</p></blockquote>
-<h2 id="risk-categories--mitigation">Risk Categories &amp; Mitigation</h2>
-<h3 id="1-functionality-loss-risks">1. Functionality Loss Risks</h3>
-<h4 id="risk-removing-components-that-are-actually-used">Risk: Removing Components That Are Actually Used</h4>
+<h2 id="risk-categories--mitigation">Risk Categories &amp; Mitigation<a hidden class="anchor" aria-hidden="true" href="#risk-categories--mitigation">#</a></h2>
+<h3 id="1-functionality-loss-risks">1. Functionality Loss Risks<a hidden class="anchor" aria-hidden="true" href="#1-functionality-loss-risks">#</a></h3>
+<h4 id="risk-removing-components-that-are-actually-used">Risk: Removing Components That Are Actually Used<a hidden class="anchor" aria-hidden="true" href="#risk-removing-components-that-are-actually-used">#</a></h4>
 <p><strong>Probability</strong>: Medium<br>
 <strong>Impact</strong>: High<br>
 <strong>Mitigation Strategy</strong>:</p>
@@ -256,7 +257,7 @@
 <li><input disabled="" type="checkbox"> <strong>Component restoration</strong>: Restore from backup if needed</li>
 <li><input disabled="" type="checkbox"> <strong>Deprecation path</strong>: Gradual removal with warnings if component is used</li>
 </ul>
-<h4 id="risk-breaking-api-contracts">Risk: Breaking API Contracts</h4>
+<h4 id="risk-breaking-api-contracts">Risk: Breaking API Contracts<a hidden class="anchor" aria-hidden="true" href="#risk-breaking-api-contracts">#</a></h4>
 <p><strong>Probability</strong>: Low (with proper analysis)<br>
 <strong>Impact</strong>: Critical<br>
 <strong>Mitigation Strategy</strong>:</p>
@@ -274,8 +275,8 @@
 <li><input disabled="" type="checkbox"> <strong>Documentation validation</strong>: Ensure docs match actual API</li>
 <li><input disabled="" type="checkbox"> <strong>Type checking</strong>: Verify type signatures remain compatible</li>
 </ul>
-<h3 id="2-performance-degradation-risks">2. Performance Degradation Risks</h3>
-<h4 id="risk-removing-critical-optimizations">Risk: Removing Critical Optimizations</h4>
+<h3 id="2-performance-degradation-risks">2. Performance Degradation Risks<a hidden class="anchor" aria-hidden="true" href="#2-performance-degradation-risks">#</a></h3>
+<h4 id="risk-removing-critical-optimizations">Risk: Removing Critical Optimizations<a hidden class="anchor" aria-hidden="true" href="#risk-removing-critical-optimizations">#</a></h4>
 <p><strong>Probability</strong>: Low<br>
 <strong>Impact</strong>: High<br>
 <strong>Mitigation Strategy</strong>:</p>
@@ -299,8 +300,8 @@
 <li><input disabled="" type="checkbox"> <strong>Selective restoration</strong>: Restore only critical optimizations</li>
 <li><input disabled="" type="checkbox"> <strong>Alternative optimization</strong>: Find simpler ways to achieve same performance</li>
 </ul>
-<h3 id="3-test-coverage-reduction-risks">3. Test Coverage Reduction Risks</h3>
-<h4 id="risk-losing-critical-bug-detection">Risk: Losing Critical Bug Detection</h4>
+<h3 id="3-test-coverage-reduction-risks">3. Test Coverage Reduction Risks<a hidden class="anchor" aria-hidden="true" href="#3-test-coverage-reduction-risks">#</a></h3>
+<h4 id="risk-losing-critical-bug-detection">Risk: Losing Critical Bug Detection<a hidden class="anchor" aria-hidden="true" href="#risk-losing-critical-bug-detection">#</a></h4>
 <p><strong>Probability</strong>: Medium<br>
 <strong>Impact</strong>: High<br>
 <strong>Mitigation Strategy</strong>:</p>
@@ -324,8 +325,8 @@
 <li><input disabled="" type="checkbox"> <strong>Enhanced monitoring</strong>: Add production monitoring for uncovered areas</li>
 <li><input disabled="" type="checkbox"> <strong>Bug fix validation</strong>: Ensure new bugs get appropriate test coverage</li>
 </ul>
-<h3 id="4-team-disruption-risks">4. Team Disruption Risks</h3>
-<h4 id="risk-developer-workflow-interruption">Risk: Developer Workflow Interruption</h4>
+<h3 id="4-team-disruption-risks">4. Team Disruption Risks<a hidden class="anchor" aria-hidden="true" href="#4-team-disruption-risks">#</a></h3>
+<h4 id="risk-developer-workflow-interruption">Risk: Developer Workflow Interruption<a hidden class="anchor" aria-hidden="true" href="#risk-developer-workflow-interruption">#</a></h4>
 <p><strong>Probability</strong>: Medium<br>
 <strong>Impact</strong>: Medium<br>
 <strong>Mitigation Strategy</strong>:</p>
@@ -349,8 +350,8 @@
 <li><input disabled="" type="checkbox"> <strong>Pair programming</strong>: Help developers adapt to changes</li>
 <li><input disabled="" type="checkbox"> <strong>Temporary bridges</strong>: Provide temporary compatibility layers if needed</li>
 </ul>
-<h2 id="git-strategy-for-risk-management">Git Strategy for Risk Management</h2>
-<h3 id="branch-management">Branch Management</h3>
+<h2 id="git-strategy-for-risk-management">Git Strategy for Risk Management<a hidden class="anchor" aria-hidden="true" href="#git-strategy-for-risk-management">#</a></h2>
+<h3 id="branch-management">Branch Management<a hidden class="anchor" aria-hidden="true" href="#branch-management">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Create dedicated simplification branch</span>
 </span></span><span style="display:flex;"><span>git checkout -b simplification-phase-1
 </span></span><span style="display:flex;"><span>
@@ -358,7 +359,7 @@
 </span></span><span style="display:flex;"><span>git checkout -b micro-001-test-consolidation
 </span></span><span style="display:flex;"><span>git checkout -b micro-002-benchmark-cleanup
 </span></span><span style="display:flex;"><span>git checkout -b micro-003-doc-streamlining
-</span></span></code></pre></div><h3 id="commit-strategy">Commit Strategy</h3>
+</span></span></code></pre></div><h3 id="commit-strategy">Commit Strategy<a hidden class="anchor" aria-hidden="true" href="#commit-strategy">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Commit after each micro-ticket completion</span>
 </span></span><span style="display:flex;"><span>git add .
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#0a3069">&#34;MICRO-001: Consolidate basic test files
@@ -370,7 +371,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#57606a"># Tag major milestones</span>
 </span></span><span style="display:flex;"><span>git tag <span style="color:#0a3069">&#34;simplification-phase1-complete&#34;</span>
-</span></span></code></pre></div><h3 id="rollback-procedures">Rollback Procedures</h3>
+</span></span></code></pre></div><h3 id="rollback-procedures">Rollback Procedures<a hidden class="anchor" aria-hidden="true" href="#rollback-procedures">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Individual micro-ticket rollback</span>
 </span></span><span style="display:flex;"><span>git revert &lt;commit-hash&gt;
 </span></span><span style="display:flex;"><span>
@@ -382,8 +383,8 @@
 </span></span><span style="display:flex;"><span>git checkout simplification-phase-1
 </span></span><span style="display:flex;"><span>git revert &lt;specific-commit-hash&gt;
 </span></span><span style="display:flex;"><span>git cherry-pick &lt;commits-to-keep&gt;
-</span></span></code></pre></div><h2 id="testing-strategy-for-risk-mitigation">Testing Strategy for Risk Mitigation</h2>
-<h3 id="pre-simplification-testing">Pre-Simplification Testing</h3>
+</span></span></code></pre></div><h2 id="testing-strategy-for-risk-mitigation">Testing Strategy for Risk Mitigation<a hidden class="anchor" aria-hidden="true" href="#testing-strategy-for-risk-mitigation">#</a></h2>
+<h3 id="pre-simplification-testing">Pre-Simplification Testing<a hidden class="anchor" aria-hidden="true" href="#pre-simplification-testing">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Establish baseline</span>
 </span></span><span style="display:flex;"><span>make <span style="color:#6639ba">test</span> &gt; baseline-test-results.txt
 </span></span><span style="display:flex;"><span>make benchmark &gt; baseline-benchmark-results.txt
@@ -392,54 +393,54 @@
 </span></span><span style="display:flex;"><span><span style="color:#57606a"># Document current state</span>
 </span></span><span style="display:flex;"><span>git add baseline-*.txt
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#0a3069">&#34;Establish simplification baseline metrics&#34;</span>
-</span></span></code></pre></div><h3 id="during-simplification-testing">During-Simplification Testing</h3>
+</span></span></code></pre></div><h3 id="during-simplification-testing">During-Simplification Testing<a hidden class="anchor" aria-hidden="true" href="#during-simplification-testing">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># After each micro-ticket</span>
 </span></span><span style="display:flex;"><span>make <span style="color:#6639ba">test</span>                    <span style="color:#57606a"># Must pass 100%</span>
 </span></span><span style="display:flex;"><span>make benchmark              <span style="color:#57606a"># Performance check</span>
 </span></span><span style="display:flex;"><span>make examples               <span style="color:#57606a"># Verify examples work</span>
 </span></span><span style="display:flex;"><span>make integration-test       <span style="color:#57606a"># End-to-end validation</span>
-</span></span></code></pre></div><h3 id="post-simplification-validation">Post-Simplification Validation</h3>
+</span></span></code></pre></div><h3 id="post-simplification-validation">Post-Simplification Validation<a hidden class="anchor" aria-hidden="true" href="#post-simplification-validation">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Comprehensive verification</span>
 </span></span><span style="display:flex;"><span>make test-all              <span style="color:#57606a"># All test suites</span>
 </span></span><span style="display:flex;"><span>make performance-test      <span style="color:#57606a"># Full performance validation  </span>
 </span></span><span style="display:flex;"><span>make compatibility-test    <span style="color:#57606a"># Backward compatibility check</span>
 </span></span><span style="display:flex;"><span>make integration-test      <span style="color:#57606a"># Real usage scenarios</span>
-</span></span></code></pre></div><h2 id="risk-assessment-matrix">Risk Assessment Matrix</h2>
-<h3 id="risk-scoring-system">Risk Scoring System</h3>
+</span></span></code></pre></div><h2 id="risk-assessment-matrix">Risk Assessment Matrix<a hidden class="anchor" aria-hidden="true" href="#risk-assessment-matrix">#</a></h2>
+<h3 id="risk-scoring-system">Risk Scoring System<a hidden class="anchor" aria-hidden="true" href="#risk-scoring-system">#</a></h3>
 <p><strong>Probability</strong>: 1=Very Low, 2=Low, 3=Medium, 4=High, 5=Very High<br>
 <strong>Impact</strong>: 1=Minimal, 2=Low, 3=Medium, 4=High, 5=Critical<br>
 <strong>Risk Score</strong>: Probability × Impact</p>
-<h3 id="risk-categories-by-score">Risk Categories by Score</h3>
-<h4 id="low-risk-1-6-proceed-with-standard-precautions">Low Risk (1-6): Proceed with Standard Precautions</h4>
+<h3 id="risk-categories-by-score">Risk Categories by Score<a hidden class="anchor" aria-hidden="true" href="#risk-categories-by-score">#</a></h3>
+<h4 id="low-risk-1-6-proceed-with-standard-precautions">Low Risk (1-6): Proceed with Standard Precautions<a hidden class="anchor" aria-hidden="true" href="#low-risk-1-6-proceed-with-standard-precautions">#</a></h4>
 <ul>
 <li>Documentation simplification</li>
 <li>Redundant example removal</li>
 <li>Obvious dead code elimination</li>
 <li>Clear test file consolidation</li>
 </ul>
-<h4 id="medium-risk-8-12-enhanced-mitigation-required">Medium Risk (8-12): Enhanced Mitigation Required</h4>
+<h4 id="medium-risk-8-12-enhanced-mitigation-required">Medium Risk (8-12): Enhanced Mitigation Required<a hidden class="anchor" aria-hidden="true" href="#medium-risk-8-12-enhanced-mitigation-required">#</a></h4>
 <ul>
 <li>API surface reduction</li>
 <li>Component consolidation</li>
 <li>Benchmark elimination</li>
 <li>Configuration file changes</li>
 </ul>
-<h4 id="high-risk-15-20-extensive-mitigation-required">High Risk (15-20): Extensive Mitigation Required</h4>
+<h4 id="high-risk-15-20-extensive-mitigation-required">High Risk (15-20): Extensive Mitigation Required<a hidden class="anchor" aria-hidden="true" href="#high-risk-15-20-extensive-mitigation-required">#</a></h4>
 <ul>
 <li>Core functionality changes</li>
 <li>Critical test removal</li>
 <li>Performance optimization changes</li>
 <li>Public API modifications</li>
 </ul>
-<h4 id="critical-risk-20-25-avoid-or-extreme-caution">Critical Risk (20-25): Avoid or Extreme Caution</h4>
+<h4 id="critical-risk-20-25-avoid-or-extreme-caution">Critical Risk (20-25): Avoid or Extreme Caution<a hidden class="anchor" aria-hidden="true" href="#critical-risk-20-25-avoid-or-extreme-caution">#</a></h4>
 <ul>
 <li>Breaking API changes</li>
 <li>Removing unknown legacy code</li>
 <li>Eliminating error handling</li>
 <li>Changing core algorithms</li>
 </ul>
-<h2 id="risk-mitigation-checklist">Risk Mitigation Checklist</h2>
-<h3 id="before-starting-simplification">Before Starting Simplification</h3>
+<h2 id="risk-mitigation-checklist">Risk Mitigation Checklist<a hidden class="anchor" aria-hidden="true" href="#risk-mitigation-checklist">#</a></h2>
+<h3 id="before-starting-simplification">Before Starting Simplification<a hidden class="anchor" aria-hidden="true" href="#before-starting-simplification">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Full backup</strong>: Complete system backup with restoration procedures tested</li>
 <li><input disabled="" type="checkbox"> <strong>Team alignment</strong>: All stakeholders understand and approve simplification goals</li>
@@ -448,7 +449,7 @@
 <li><input disabled="" type="checkbox"> <strong>Success criteria</strong>: Measurable goals for simplification success</li>
 <li><input disabled="" type="checkbox"> <strong>Timeline</strong>: Realistic schedule with buffer for unexpected issues</li>
 </ul>
-<h3 id="during-each-micro-ticket">During Each Micro-Ticket</h3>
+<h3 id="during-each-micro-ticket">During Each Micro-Ticket<a hidden class="anchor" aria-hidden="true" href="#during-each-micro-ticket">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Single focus</strong>: Change only one thing per micro-ticket</li>
 <li><input disabled="" type="checkbox"> <strong>Immediate testing</strong>: Verify functionality after each change</li>
@@ -456,7 +457,7 @@
 <li><input disabled="" type="checkbox"> <strong>Progress tracking</strong>: Update risk status and mitigation effectiveness</li>
 <li><input disabled="" type="checkbox"> <strong>Stakeholder updates</strong>: Regular communication about progress and issues</li>
 </ul>
-<h3 id="after-completing-simplification">After Completing Simplification</h3>
+<h3 id="after-completing-simplification">After Completing Simplification<a hidden class="anchor" aria-hidden="true" href="#after-completing-simplification">#</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Comprehensive testing</strong>: Full system validation across all scenarios</li>
 <li><input disabled="" type="checkbox"> <strong>Performance verification</strong>: Confirm no performance regressions</li>
@@ -465,8 +466,8 @@
 <li><input disabled="" type="checkbox"> <strong>Monitoring setup</strong>: Enhanced monitoring for previously tested areas</li>
 <li><input disabled="" type="checkbox"> <strong>Success measurement</strong>: Quantify simplification benefits achieved</li>
 </ul>
-<h2 id="emergency-procedures">Emergency Procedures</h2>
-<h3 id="if-critical-issue-discovered">If Critical Issue Discovered</h3>
+<h2 id="emergency-procedures">Emergency Procedures<a hidden class="anchor" aria-hidden="true" href="#emergency-procedures">#</a></h2>
+<h3 id="if-critical-issue-discovered">If Critical Issue Discovered<a hidden class="anchor" aria-hidden="true" href="#if-critical-issue-discovered">#</a></h3>
 <ol>
 <li>
 <p><strong>Immediate Assessment</strong> (5 minutes)</p>
@@ -501,14 +502,14 @@
 </ul>
 </li>
 </ol>
-<h3 id="rollback-triggers">Rollback Triggers</h3>
+<h3 id="rollback-triggers">Rollback Triggers<a hidden class="anchor" aria-hidden="true" href="#rollback-triggers">#</a></h3>
 <ul>
 <li><strong>Immediate rollback</strong>: Any test failure, build failure, or critical functionality loss</li>
 <li><strong>Planned rollback</strong>: Performance degradation &gt;20%, team productivity impact &gt;25%</li>
 <li><strong>Partial rollback</strong>: Specific components causing issues while preserving beneficial changes</li>
 </ul>
-<h2 id="success-indicators-for-risk-management">Success Indicators for Risk Management</h2>
-<h3 id="green-flags-low-risk-execution">Green Flags (Low Risk Execution)</h3>
+<h2 id="success-indicators-for-risk-management">Success Indicators for Risk Management<a hidden class="anchor" aria-hidden="true" href="#success-indicators-for-risk-management">#</a></h2>
+<h3 id="green-flags-low-risk-execution">Green Flags (Low Risk Execution)<a hidden class="anchor" aria-hidden="true" href="#green-flags-low-risk-execution">#</a></h3>
 <ul>
 <li>✅ All tests passing after each change</li>
 <li>✅ No performance degradation detected</li>
@@ -516,14 +517,14 @@
 <li>✅ Simplification goals being met on schedule</li>
 <li>✅ No critical functionality issues reported</li>
 </ul>
-<h3 id="yellow-flags-increased-monitoring">Yellow Flags (Increased Monitoring)</h3>
+<h3 id="yellow-flags-increased-monitoring">Yellow Flags (Increased Monitoring)<a hidden class="anchor" aria-hidden="true" href="#yellow-flags-increased-monitoring">#</a></h3>
 <ul>
 <li>⚠️ Minor test failures that are quickly resolved</li>
 <li>⚠️ Small performance variations within acceptable range</li>
 <li>⚠️ Team questions about new structure (normal adaptation)</li>
 <li>⚠️ Timeline delays due to unexpected complexity</li>
 </ul>
-<h3 id="red-flags-consider-rollback">Red Flags (Consider Rollback)</h3>
+<h3 id="red-flags-consider-rollback">Red Flags (Consider Rollback)<a hidden class="anchor" aria-hidden="true" href="#red-flags-consider-rollback">#</a></h3>
 <ul>
 <li>🚨 Multiple test failures or build breaks</li>
 <li>🚨 Significant performance degradation</li>
@@ -531,15 +532,15 @@
 <li>🚨 Users reporting broken functionality</li>
 <li>🚨 Unknown side effects appearing</li>
 </ul>
-<h2 id="risk-mitigation-tools">Risk Mitigation Tools</h2>
-<h3 id="automated-risk-detection">Automated Risk Detection</h3>
+<h2 id="risk-mitigation-tools">Risk Mitigation Tools<a hidden class="anchor" aria-hidden="true" href="#risk-mitigation-tools">#</a></h2>
+<h3 id="automated-risk-detection">Automated Risk Detection<a hidden class="anchor" aria-hidden="true" href="#automated-risk-detection">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Pre-commit hooks for risk detection</span>
 </span></span><span style="display:flex;"><span><span style="color:#57606a">#!/bin/bash</span>
 </span></span><span style="display:flex;"><span><span style="color:#57606a"># Check for breaking changes</span>
 </span></span><span style="display:flex;"><span>make <span style="color:#6639ba">test</span> <span style="color:#0550ae">||</span> <span style="color:#6639ba">exit</span> <span style="color:#0550ae">1</span>
 </span></span><span style="display:flex;"><span>make benchmark-check <span style="color:#0550ae">||</span> <span style="color:#6639ba">exit</span> <span style="color:#0550ae">1</span>
 </span></span><span style="display:flex;"><span>make api-compatibility-check <span style="color:#0550ae">||</span> <span style="color:#6639ba">exit</span> <span style="color:#0550ae">1</span>
-</span></span></code></pre></div><h3 id="monitoring-scripts">Monitoring Scripts</h3>
+</span></span></code></pre></div><h3 id="monitoring-scripts">Monitoring Scripts<a hidden class="anchor" aria-hidden="true" href="#monitoring-scripts">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># Performance monitoring</span>
 </span></span><span style="display:flex;"><span><span style="color:#57606a">#!/bin/bash</span>
 </span></span><span style="display:flex;"><span><span style="color:#953800">CURRENT_PERF</span><span style="color:#0550ae">=</span><span style="color:#cf222e">$(</span>make benchmark-quick<span style="color:#cf222e">)</span>
@@ -548,7 +549,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;ALERT: Performance degradation detected&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#6639ba">exit</span> <span style="color:#0550ae">1</span>
 </span></span><span style="display:flex;"><span><span style="color:#cf222e">fi</span>
-</span></span></code></pre></div><h3 id="risk-documentation-template">Risk Documentation Template</h3>
+</span></span></code></pre></div><h3 id="risk-documentation-template">Risk Documentation Template<a hidden class="anchor" aria-hidden="true" href="#risk-documentation-template">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>## Risk: [Risk Name]
 </span></span><span style="display:flex;"><span>**Probability**: [1-5]
 </span></span><span style="display:flex;"><span>**Impact**: [1-5]  
@@ -568,48 +569,132 @@
 </span></span></code></pre></div><p>The key to successful simplification is not avoiding all risks, but identifying them early and having solid mitigation strategies in place. This enables confident simplification while maintaining system reliability.</p>
 
 
-                    </div>
-                </div>
-            </main>
-        </div>
-    </div>
+  </div>
 
-    
-    <footer class="bg-white border-t border-gray-200 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Merciless Simplification</h3>
-                    <p class="text-gray-600 text-sm">AI Agent Framework for systematically eliminating code complexity while preserving 100% functionality.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="/merciless-simplification/AI_AGENT_USAGE_GUIDE/" class="hover:text-blue-600">AI Guide</a></li>
-                        <li><a href="/merciless-simplification/SIMPLIFICATION_PATTERNS/" class="hover:text-blue-600">11 Patterns</a></li>
-                        <li><a href="/merciless-simplification/SIMPLIFICATION_RESULTS/" class="hover:text-blue-600">Case Study Results</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Resources</h3>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="https://github.com/mfenderov/merciless-simplification" class="hover:text-blue-600">GitHub Repository</a></li>
-                        <li><a href="https://github.com/mfenderov/konfig" class="hover:text-blue-600">Konfig Library</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-500">
-                <p>&copy; 2025 Merciless Simplification Methodology. Open source and freely available.</p>
-            </div>
-        </div>
-    </footer>
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
 
+  </footer>
+</article>
+    </main>
     
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Merciless Simplification</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
         });
-    </script>
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
 </body>
+
 </html>

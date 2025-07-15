@@ -1,11 +1,62 @@
 baseURL: 'https://mfenderov.github.io/merciless-simplification/'
 languageCode: 'en-us'
-title: 'Merciless Simplification Methodology'
-description: 'Systematic methodology for reducing codebase complexity by 20-40% while maintaining 100% functionality'
+title: 'Merciless Simplification'
+description: 'AI Agent Framework for ruthlessly eliminating code complexity while preserving 100% functionality'
+theme: 'PaperMod'
 
 params:
   author: 'Mark Fenderov'
   twitter: 'mfenderov'
+  
+  # PaperMod theme settings
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: false
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "⚔️"
+    favicon16x16: "⚔️"
+    favicon32x32: "⚔️"
+    apple_touch_icon: "⚔️"
+    safari_pinned_tab: "⚔️"
+
+  # Profile mode (for homepage)
+  profileMode:
+    enabled: true
+    title: "Merciless Simplification"
+    subtitle: "⚔️ AI Agent Framework for systematically eliminating code complexity while preserving 100% functionality"
+    imageUrl: ""
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: "Merciless Simplification"
+    buttons:
+      - name: "🤖 AI Agent Guide"
+        url: "/ai_agent_usage_guide/"
+      - name: "📋 Complete Framework"
+        url: "/complete_simplification_playbook/"
+
+  # Home-info mode
+  homeInfoParams:
+    Title: "Merciless Simplification ⚔️"
+    Content: "AI Agent Framework for ruthlessly eliminating code complexity while preserving 100% functionality"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/mfenderov/merciless-simplification"
 
 # Menu configuration
 menu:
