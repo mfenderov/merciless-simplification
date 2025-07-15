@@ -1,4 +1,4 @@
-baseURL: 'https://mfenderov.github.io/merciless-simplification'
+baseURL: 'https://mfenderov.github.io/merciless-simplification/'
 languageCode: 'en-us'
 title: 'Merciless Simplification Methodology'
 description: 'Systematic methodology for reducing codebase complexity by 20-40% while maintaining 100% functionality'
@@ -14,13 +14,13 @@ menu:
       url: '/'
       weight: 10
     - name: 'AI Guide'
-      url: '/AI_AGENT_USAGE_GUIDE/'
+      url: '/ai_agent_usage_guide/'
       weight: 20
     - name: 'Patterns'
-      url: '/SIMPLIFICATION_PATTERNS/'
+      url: '/simplification_patterns/'
       weight: 30
     - name: 'Case Study'
-      url: '/SIMPLIFICATION_RESULTS/'
+      url: '/simplification_results/'
       weight: 40
     - name: 'GitHub'
       url: 'https://github.com/mfenderov/merciless-simplification'
