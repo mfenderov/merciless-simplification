@@ -1,3 +1,8 @@
+---
+title: "Konfig Simplification Results"
+description: "Real case study results showing 25% fewer files, 22% less code, and 31% simpler documentation with 0% broken features."
+---
+
 # Konfig Simplification Results
 
 ## Summary

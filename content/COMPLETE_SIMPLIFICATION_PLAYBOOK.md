@@ -1,6 +1,6 @@
 ---
-layout: default
 title: "Complete Playbook"
+description: "The Ultimate Guide to systematically simplify any codebase, reduce complexity by 20-40%, and improve developer productivity."
 ---
 
 # Complete Simplification Playbook

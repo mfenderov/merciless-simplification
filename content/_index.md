@@ -1,6 +1,6 @@
 ---
-layout: default
 title: "Merciless Simplification - AI Agent Framework"
+description: "AI Agent Framework for ruthlessly eliminating code complexity while preserving 100% functionality."
 ---
 
 <!-- Hero Section -->

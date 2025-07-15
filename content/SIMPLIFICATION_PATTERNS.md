@@ -1,6 +1,6 @@
 ---
-layout: default
 title: "Simplification Patterns"
+description: "Proven patterns for simplifying different types of code complexity, with real examples and anti-patterns to avoid."
 ---
 
 # Common Simplification Patterns

@@ -1,6 +1,6 @@
 ---
-layout: default
 title: "Analysis Checklist"
+description: "Systematic assessment of any codebase to identify simplification opportunities and prioritize efforts for maximum impact."
 ---
 
 # Simplification Analysis Checklist

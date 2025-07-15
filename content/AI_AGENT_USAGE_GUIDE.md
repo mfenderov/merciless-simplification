@@ -1,6 +1,6 @@
 ---
-layout: default
 title: "AI Agent Usage Guide"
+description: "Comprehensive guide for instructing AI coding agents to apply the Merciless Simplification methodology effectively."
 ---
 
 # AI Agent Usage Guide - Merciless Simplification

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    {% seo %}
+    <title>{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -142,7 +143,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <a href="{{ '/' | relative_url }}" class="text-2xl font-bold text-blue-600 hover:text-blue-800">
+                    <a href="{{ .Site.BaseURL }}" class="text-2xl font-bold text-blue-600 hover:text-blue-800">
                         Merciless Simplification
                     </a>
                     <span class="ml-3 px-2 py-1 bg-blue-600 text-white text-xs rounded-full">🤖 AI Framework</span>
@@ -157,22 +158,19 @@
                 
                 <!-- Desktop navigation -->
                 <nav class="hidden md:flex space-x-6">
-                    <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                    <a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium">AI Guide</a>
-                    <a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium">Patterns</a>
-                    <a href="{{ '/SIMPLIFICATION_RESULTS.html' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium">Case Study</a>
-                    <a href="https://github.com/mfenderov/merciless-simplification" class="text-gray-700 hover:text-blue-600 font-medium">GitHub</a>
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                        <a href="{{ .URL }}" class="text-gray-700 hover:text-blue-600 font-medium">{{ .Name }}</a>
+                    {{ end }}
                 </nav>
             </div>
             
             <!-- Mobile navigation -->
             <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 py-4">
                 <nav class="flex flex-col space-y-2">
-                    <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium py-2">Home</a>
-                    <a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium py-2">AI Guide</a>
-                    <a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium py-2">Patterns</a>
-                    <a href="{{ '/SIMPLIFICATION_RESULTS.html' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium py-2">Case Study</a>
-                    <a href="https://github.com/mfenderov/merciless-simplification" class="text-gray-700 hover:text-blue-600 font-medium py-2">GitHub</a>
+                    {{ range .Site.Menus.main }}
+                        <a href="{{ .URL }}" class="text-gray-700 hover:text-blue-600 font-medium py-2">{{ .Name }}</a>
+                    {{ end }}
                 </nav>
             </div>
         </div>
@@ -188,19 +186,19 @@
                     <nav class="space-y-3 text-sm">
                         <div class="pb-3 border-b border-gray-200">
                             <p class="font-medium text-blue-600 mb-2">🤖 AI Agent</p>
-                            <a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="text-gray-600 hover:text-blue-600 block">Usage Guide</a>
+                            <a href="/merciless-simplification/AI_AGENT_USAGE_GUIDE/" class="text-gray-600 hover:text-blue-600 block">Usage Guide</a>
                         </div>
                         <div class="pb-3 border-b border-gray-200">
                             <p class="font-medium text-gray-700 mb-2">📋 Framework</p>
                             <ul class="space-y-1">
-                                <li><a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="text-gray-600 hover:text-blue-600 block">11 Patterns</a></li>
-                                <li><a href="{{ '/COMPLETE_SIMPLIFICATION_PLAYBOOK.html' | relative_url }}" class="text-gray-600 hover:text-blue-600 block">Complete Playbook</a></li>
+                                <li><a href="/merciless-simplification/SIMPLIFICATION_PATTERNS/" class="text-gray-600 hover:text-blue-600 block">11 Patterns</a></li>
+                                <li><a href="/merciless-simplification/COMPLETE_SIMPLIFICATION_PLAYBOOK/" class="text-gray-600 hover:text-blue-600 block">Complete Playbook</a></li>
                             </ul>
                         </div>
                         <div>
                             <p class="font-medium text-gray-700 mb-2">📊 Results</p>
                             <ul class="space-y-1">
-                                <li><a href="{{ '/SIMPLIFICATION_RESULTS.html' | relative_url }}" class="text-gray-600 hover:text-blue-600 block">Case Study Results</a></li>
+                                <li><a href="/merciless-simplification/SIMPLIFICATION_RESULTS/" class="text-gray-600 hover:text-blue-600 block">Case Study Results</a></li>
                                 <li><a href="https://github.com/mfenderov/konfig" class="text-gray-600 hover:text-blue-600 block">Konfig Library</a></li>
                             </ul>
                         </div>
@@ -212,7 +210,7 @@
             <main class="flex-1 bg-white rounded-lg shadow-sm">
                 <div class="p-8">
                     <div class="max-w-4xl mx-auto">
-                        {{ content }}
+                        {{ block "main" . }}{{ end }}
                     </div>
                 </div>
             </main>
@@ -230,9 +228,9 @@
                 <div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="hover:text-blue-600">AI Guide</a></li>
-                        <li><a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="hover:text-blue-600">11 Patterns</a></li>
-                        <li><a href="{{ '/SIMPLIFICATION_RESULTS.html' | relative_url }}" class="hover:text-blue-600">Case Study Results</a></li>
+                        <li><a href="/merciless-simplification/AI_AGENT_USAGE_GUIDE/" class="hover:text-blue-600">AI Guide</a></li>
+                        <li><a href="/merciless-simplification/SIMPLIFICATION_PATTERNS/" class="hover:text-blue-600">11 Patterns</a></li>
+                        <li><a href="/merciless-simplification/SIMPLIFICATION_RESULTS/" class="hover:text-blue-600">Case Study Results</a></li>
                     </ul>
                 </div>
                 <div>
