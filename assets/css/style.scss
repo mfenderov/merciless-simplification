@@ -1,0 +1,94 @@
+---
+---
+
+@import "minima";
+
+// Custom styles for Merciless Simplification
+.site-header {
+  border-bottom: 2px solid #2563eb;
+}
+
+.site-title {
+  font-weight: 600;
+  color: #1e40af !important;
+}
+
+// Improve code blocks
+.highlight {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+// Style for methodology boxes
+blockquote {
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  
+  p {
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
+// Improve navigation
+.page-link {
+  color: #374151;
+  
+  &:hover {
+    color: #1e40af;
+    text-decoration: none;
+  }
+}
+
+// Style for success metrics and results
+.highlight-box {
+  background: #f0fdf4;
+  border: 1px solid #22c55e;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+// Improve headings
+h1, h2, h3, h4, h5, h6 {
+  color: #1f2937;
+}
+
+h2 {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+// Style for emoji sections
+h2:has(+ p:contains("🎯")),
+h2:has(+ p:contains("🚀")),
+h2:has(+ p:contains("📊")) {
+  margin-top: 2.5rem;
+}
+
+// Improve list styling
+ul li, ol li {
+  margin-bottom: 0.5rem;
+}
+
+// Style for pattern examples
+.language-markdown .highlight,
+.language-jsx .highlight,
+.language-go .highlight {
+  background: #fafafa;
+  border-left: 3px solid #6366f1;
+}
+
+// Footer improvements
+.site-footer {
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+}

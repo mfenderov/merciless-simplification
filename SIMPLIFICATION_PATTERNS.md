@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Simplification Patterns"
+nav_order: 5
+---
+
 # Common Simplification Patterns
 
 > **Purpose**: Proven patterns for simplifying different types of code complexity, with real examples and anti-patterns to avoid.

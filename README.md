@@ -1,3 +1,9 @@
+---
+layout: home
+title: "Home"
+nav_order: 1
+---
+
 # Merciless Simplification Methodology
 
 > **Transform any codebase**: Systematically reduce complexity by 20-40% while maintaining 100% functionality through proven micro-ticket approaches.
@@ -13,6 +19,9 @@
 ## 🚀 Quick Start
 
 ### Choose Your Path:
+
+**🤖 Using AI Agents?**  
+→ [`AI_AGENT_USAGE_GUIDE.md`](AI_AGENT_USAGE_GUIDE.md) - Complete guide for Claude, GPT, and other coding agents
 
 **🎮 Ready to Start Now?**  
 → [`COMPLETE_SIMPLIFICATION_PLAYBOOK.md`](COMPLETE_SIMPLIFICATION_PLAYBOOK.md) - Everything you need in one guide
@@ -31,6 +40,7 @@
 ### Core Methodology
 - **[`MERCILESS_SIMPLIFICATION_METHODOLOGY.md`](MERCILESS_SIMPLIFICATION_METHODOLOGY.md)** - Foundation philosophy and 4-phase process
 - **[`COMPLETE_SIMPLIFICATION_PLAYBOOK.md`](COMPLETE_SIMPLIFICATION_PLAYBOOK.md)** - Master guide integrating everything
+- **[`AI_AGENT_USAGE_GUIDE.md`](AI_AGENT_USAGE_GUIDE.md)** - Comprehensive guide for AI coding agents (Claude, GPT, etc.)
 
 ### Assessment & Planning
 - **[`SIMPLIFICATION_ANALYSIS_CHECKLIST.md`](SIMPLIFICATION_ANALYSIS_CHECKLIST.md)** - Systematic evaluation procedures

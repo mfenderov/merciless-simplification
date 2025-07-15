@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Complete Playbook"
+nav_order: 3
+---
+
 # Complete Simplification Playbook
 
 > **The Ultimate Guide**: Everything you need to systematically simplify any codebase, reduce complexity by 20-40%, and improve developer productivity while maintaining 100% functionality.

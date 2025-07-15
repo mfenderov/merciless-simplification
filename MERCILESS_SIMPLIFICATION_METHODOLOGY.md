@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Core Methodology"
+nav_order: 4
+---
+
 # "Merciless Simplification" Methodology
 
 > **Core Principle**: Keep what provides value, eliminate what doesn't. Every line of code, every test, every piece of documentation must justify its existence.

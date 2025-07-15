@@ -1,0 +1,50 @@
+# Site settings
+title: "Merciless Simplification Methodology"
+description: "Systematic methodology for reducing codebase complexity by 20-40% while maintaining 100% functionality"
+baseurl: "/merciless-simplification"
+url: "https://mfenderov.github.io"
+author: "Mark Fenderov"
+
+# Jekyll settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation structure
+header_pages:
+  - README.md
+  - AI_AGENT_USAGE_GUIDE.md
+  - COMPLETE_SIMPLIFICATION_PLAYBOOK.md
+  - MERCILESS_SIMPLIFICATION_METHODOLOGY.md
+  - SIMPLIFICATION_PATTERNS.md
+  - SIMPLIFICATION_ANALYSIS_CHECKLIST.md
+  - RISK_MITIGATION_STRATEGIES.md
+
+# SEO and social
+twitter:
+  username: mfenderov
+  card: summary_large_image
+
+# Build settings
+safe: true
+incremental: false
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+
+# Include files
+include:
+  - _pages

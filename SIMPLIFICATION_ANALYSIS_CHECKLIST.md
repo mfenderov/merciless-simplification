@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Analysis Checklist"
+nav_order: 6
+---
+
 # Simplification Analysis Checklist
 
 > **Purpose**: Systematic assessment of any codebase to identify simplification opportunities and prioritize efforts for maximum impact.
