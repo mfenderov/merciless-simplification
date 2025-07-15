@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: default
 title: "Simplification Patterns"
-nav_order: 5
 ---
 
 # Common Simplification Patterns

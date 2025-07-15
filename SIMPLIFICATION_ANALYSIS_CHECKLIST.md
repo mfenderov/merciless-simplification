@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: default
 title: "Analysis Checklist"
-nav_order: 6
 ---
 
 # Simplification Analysis Checklist

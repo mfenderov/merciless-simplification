@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: default
 title: "Complete Playbook"
-nav_order: 3
 ---
 
 # Complete Simplification Playbook

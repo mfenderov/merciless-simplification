@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: default
 title: "AI Agent Usage Guide"
-nav_order: 2
 ---
 
 # AI Agent Usage Guide - Merciless Simplification

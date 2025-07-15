@@ -8,23 +8,17 @@ author: "Mark Fenderov"
 # Jekyll settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
+remote_theme: pages-themes/minimal@v0.2.0
 
 # Plugins
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Navigation structure
-header_pages:
-  - README.md
-  - AI_AGENT_USAGE_GUIDE.md
-  - COMPLETE_SIMPLIFICATION_PLAYBOOK.md
-  - MERCILESS_SIMPLIFICATION_METHODOLOGY.md
-  - SIMPLIFICATION_PATTERNS.md
-  - SIMPLIFICATION_ANALYSIS_CHECKLIST.md
-  - RISK_MITIGATION_STRATEGIES.md
+# Show downloads button
+show_downloads: false
 
 # SEO and social
 twitter:

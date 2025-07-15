@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: default
 title: "Core Methodology"
-nav_order: 4
 ---
 
 # "Merciless Simplification" Methodology
