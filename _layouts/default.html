@@ -142,7 +142,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <a href="{{ '/' | relative_url }}" class="text-2xl font-bold text-primary hover:text-primary-dark">
+                    <a href="{{ '/' | relative_url }}" class="text-2xl font-bold text-blue-600 hover:text-blue-800">
                         Merciless Simplification
                     </a>
                     <span class="ml-3 px-2 py-1 bg-blue-600 text-white text-xs rounded-full">🤖 AI Framework</span>
@@ -157,22 +157,22 @@
                 
                 <!-- Desktop navigation -->
                 <nav class="hidden md:flex space-x-6">
-                    <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-primary font-medium">Home</a>
-                    <a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="text-gray-700 hover:text-primary font-medium">AI Agents</a>
-                    <a href="{{ '/COMPLETE_SIMPLIFICATION_PLAYBOOK.html' | relative_url }}" class="text-gray-700 hover:text-primary font-medium">Playbook</a>
-                    <a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="text-gray-700 hover:text-primary font-medium">Patterns</a>
-                    <a href="https://github.com/mfenderov/merciless-simplification" class="text-gray-700 hover:text-primary font-medium">GitHub</a>
+                    <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium">AI Guide</a>
+                    <a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium">Patterns</a>
+                    <a href="https://github.com/mfenderov/konfig" class="text-gray-700 hover:text-blue-600 font-medium">Konfig</a>
+                    <a href="https://github.com/mfenderov/merciless-simplification" class="text-gray-700 hover:text-blue-600 font-medium">GitHub</a>
                 </nav>
             </div>
             
             <!-- Mobile navigation -->
             <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 py-4">
                 <nav class="flex flex-col space-y-2">
-                    <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-primary font-medium py-2">Home</a>
-                    <a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="text-gray-700 hover:text-primary font-medium py-2">AI Agents</a>
-                    <a href="{{ '/COMPLETE_SIMPLIFICATION_PLAYBOOK.html' | relative_url }}" class="text-gray-700 hover:text-primary font-medium py-2">Playbook</a>
-                    <a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="text-gray-700 hover:text-primary font-medium py-2">Patterns</a>
-                    <a href="https://github.com/mfenderov/merciless-simplification" class="text-gray-700 hover:text-primary font-medium py-2">GitHub</a>
+                    <a href="{{ '/' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium py-2">Home</a>
+                    <a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium py-2">AI Guide</a>
+                    <a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="text-gray-700 hover:text-blue-600 font-medium py-2">Patterns</a>
+                    <a href="https://github.com/mfenderov/konfig" class="text-gray-700 hover:text-blue-600 font-medium py-2">Konfig</a>
+                    <a href="https://github.com/mfenderov/merciless-simplification" class="text-gray-700 hover:text-blue-600 font-medium py-2">GitHub</a>
                 </nav>
             </div>
         </div>
@@ -185,47 +185,23 @@
             <aside class="lg:w-64 flex-shrink-0">
                 <div class="bg-white rounded-lg shadow-sm p-6 sticky top-24">
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Navigation</h3>
-                    <nav class="space-y-2">
-                        <div class="border-b border-gray-200 pb-3 mb-3">
-                            <p class="text-sm font-medium text-gray-600 mb-2">🤖 AI Agent Quick Start</p>
-                            <ul class="space-y-1 text-sm">
-                                <li><a href="{{ '/' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">Framework Overview</a></li>
-                                <li><a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="text-blue-600 hover:text-blue-800 block py-1 font-medium">AI Agent Instructions</a></li>
-                                <li><a href="{{ '/COMPLETE_SIMPLIFICATION_PLAYBOOK.html' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">Complete Framework</a></li>
+                    <nav class="space-y-3 text-sm">
+                        <div class="pb-3 border-b border-gray-200">
+                            <p class="font-medium text-blue-600 mb-2">🤖 AI Agent</p>
+                            <a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="text-gray-600 hover:text-blue-600 block">Usage Guide</a>
+                        </div>
+                        <div class="pb-3 border-b border-gray-200">
+                            <p class="font-medium text-gray-700 mb-2">📋 Framework</p>
+                            <ul class="space-y-1">
+                                <li><a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="text-gray-600 hover:text-blue-600 block">11 Patterns</a></li>
+                                <li><a href="{{ '/COMPLETE_SIMPLIFICATION_PLAYBOOK.html' | relative_url }}" class="text-gray-600 hover:text-blue-600 block">Complete Playbook</a></li>
                             </ul>
                         </div>
-                        
-                        <div class="border-b border-gray-200 pb-3 mb-3">
-                            <p class="text-sm font-medium text-gray-600 mb-2">Core Framework</p>
-                            <ul class="space-y-1 text-sm">
-                                <li><a href="{{ '/MERCILESS_SIMPLIFICATION_METHODOLOGY.html' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">Methodology</a></li>
-                                <li><a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">11 Patterns</a></li>
-                                <li><a href="{{ '/SIMPLIFICATION_DECISION_FRAMEWORK.html' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">Decision Framework</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="border-b border-gray-200 pb-3 mb-3">
-                            <p class="text-sm font-medium text-gray-600 mb-2">Assessment</p>
-                            <ul class="space-y-1 text-sm">
-                                <li><a href="{{ '/SIMPLIFICATION_ANALYSIS_CHECKLIST.html' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">Analysis Checklist</a></li>
-                                <li><a href="{{ '/PROJECT_ASSESSMENT_TEMPLATES.html' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">Assessment Templates</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="border-b border-gray-200 pb-3 mb-3">
-                            <p class="text-sm font-medium text-gray-600 mb-2">Execution</p>
-                            <ul class="space-y-1 text-sm">
-                                <li><a href="{{ '/MICRO_TICKET_TEMPLATES.html' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">Micro-Tickets</a></li>
-                                <li><a href="{{ '/RISK_MITIGATION_STRATEGIES.html' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">Risk Mitigation</a></li>
-                            </ul>
-                        </div>
-                        
                         <div>
-                            <p class="text-sm font-medium text-gray-600 mb-2">Results</p>
-                            <ul class="space-y-1 text-sm">
-                                <li><a href="{{ '/SUCCESS_METRICS_FRAMEWORK.html' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">Success Metrics</a></li>
-                                <li><a href="{{ '/SIMPLIFICATION_RESULTS.html' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">Case Study Results</a></li>
-                                <li><a href="{{ '/SIMPLIFICATION_CASE_STUDY_TEMPLATE.html' | relative_url }}" class="text-gray-600 hover:text-primary block py-1">Case Study Template</a></li>
+                            <p class="font-medium text-gray-700 mb-2">📊 Results</p>
+                            <ul class="space-y-1">
+                                <li><a href="https://github.com/mfenderov/konfig" class="text-gray-600 hover:text-blue-600 block">Konfig Case Study</a></li>
+                                <li><a href="{{ '/SIMPLIFICATION_RESULTS.html' | relative_url }}" class="text-gray-600 hover:text-blue-600 block">Full Results</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -249,23 +225,21 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">Merciless Simplification</h3>
-                    <p class="text-gray-600 text-sm">Systematic methodology for reducing codebase complexity by 20-40% while maintaining 100% functionality.</p>
+                    <p class="text-gray-600 text-sm">AI Agent Framework for systematically eliminating code complexity while preserving 100% functionality.</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="hover:text-primary">AI Agent Guide</a></li>
-                        <li><a href="{{ '/COMPLETE_SIMPLIFICATION_PLAYBOOK.html' | relative_url }}" class="hover:text-primary">Complete Playbook</a></li>
-                        <li><a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="hover:text-primary">11 Patterns</a></li>
-                        <li><a href="{{ '/SIMPLIFICATION_ANALYSIS_CHECKLIST.html' | relative_url }}" class="hover:text-primary">Analysis Checklist</a></li>
+                        <li><a href="{{ '/AI_AGENT_USAGE_GUIDE.html' | relative_url }}" class="hover:text-blue-600">AI Guide</a></li>
+                        <li><a href="{{ '/SIMPLIFICATION_PATTERNS.html' | relative_url }}" class="hover:text-blue-600">11 Patterns</a></li>
+                        <li><a href="https://github.com/mfenderov/konfig" class="hover:text-blue-600">Konfig Case Study</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">Resources</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="https://github.com/mfenderov/merciless-simplification" class="hover:text-primary">GitHub Repository</a></li>
-                        <li><a href="{{ '/SIMPLIFICATION_RESULTS.html' | relative_url }}" class="hover:text-primary">Case Study Results</a></li>
-                        <li><a href="{{ '/SUCCESS_METRICS_FRAMEWORK.html' | relative_url }}" class="hover:text-primary">Success Metrics</a></li>
+                        <li><a href="https://github.com/mfenderov/merciless-simplification" class="hover:text-blue-600">GitHub Repository</a></li>
+                        <li><a href="{{ '/SIMPLIFICATION_RESULTS.html' | relative_url }}" class="hover:text-blue-600">Case Study Results</a></li>
                     </ul>
                 </div>
             </div>
