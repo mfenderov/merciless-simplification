@@ -15,8 +15,8 @@ description: "AI Agent Framework for ruthlessly eliminating code complexity whil
                 <div>Apply merciless simplification methodology from https://mfenderov.github.io/merciless-simplification to systematically eliminate complexity in this codebase.</div>
             </div>
             <div class="flex flex-col sm:flex-row gap-3 text-sm">
-                <a href="/merciless-simplification/AI_AGENT_USAGE_GUIDE.html" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">AI Agent Guide</a>
-                <a href="/merciless-simplification/COMPLETE_SIMPLIFICATION_PLAYBOOK.html" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Full Framework</a>
+                <a href="/merciless-simplification/ai_agent_usage_guide/" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">AI Agent Guide</a>
+                <a href="/merciless-simplification/complete_simplification_playbook/" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Full Framework</a>
             </div>
         </div>
     </div>
@@ -77,6 +77,6 @@ description: "AI Agent Framework for ruthlessly eliminating code complexity whil
     </div>
     <div class="text-center space-x-4">
         <a href="https://github.com/mfenderov/konfig" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View konfig Library →</a>
-        <a href="/merciless-simplification/SIMPLIFICATION_RESULTS.html" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Case Study Details →</a>
+        <a href="/merciless-simplification/simplification_results/" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Case Study Details →</a>
     </div>
 </div>
