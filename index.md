@@ -1,22 +1,23 @@
 ---
 layout: default
-title: "AI Agent Framework for Code Simplification"
+title: "Merciless Simplification - AI Agent Framework"
 ---
 
 <!-- Hero Section -->
-<div class="bg-blue-50 border border-blue-200 rounded-lg p-8 mb-8">
+<div class="bg-red-50 border border-red-200 rounded-lg p-8 mb-8">
     <div class="flex items-start gap-4">
-        <div class="text-4xl">🤖</div>
+        <div class="text-4xl">⚔️</div>
         <div>
-            <h1 class="text-3xl font-bold text-gray-900 mb-4">AI Agent Framework for Code Simplification</h1>
-            <p class="text-lg text-gray-700 mb-6">Give any AI agent this repository URL and systematic instructions to simplify codebases, implement features, or perform code reviews with professional methodology instead of random refactoring.</p>
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">Merciless Simplification</h1>
+            <p class="text-lg font-gray-700 mb-2"><strong>AI Agent Framework for Systematic Code Simplification</strong></p>
+            <p class="text-gray-700 mb-6">Give any AI agent this framework to ruthlessly eliminate complexity while preserving 100% functionality. No more random refactoring - systematic, merciless simplification with proven patterns and built-in safety.</p>
             <div class="bg-gray-800 text-green-400 text-sm font-mono p-3 rounded mb-4">
-                <div class="text-gray-400 mb-1"># Copy-paste this to any AI agent:</div>
-                <div>Use https://mfenderov.github.io/merciless-simplification to systematically simplify this codebase. Apply the 4-phase methodology with micro-tickets.</div>
+                <div class="text-gray-400 mb-1"># Make any AI agent mercilessly effective:</div>
+                <div>Apply merciless simplification methodology from https://mfenderov.github.io/merciless-simplification to systematically eliminate complexity in this codebase.</div>
             </div>
             <div class="flex flex-col sm:flex-row gap-3 text-sm">
-                <a href="#ai-agent-examples" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">See Examples</a>
-                <a href="/merciless-simplification/AI_AGENT_USAGE_GUIDE.html" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">Full AI Guide</a>
+                <a href="#ai-agent-examples" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">See Examples</a>
+                <a href="/merciless-simplification/AI_AGENT_USAGE_GUIDE.html" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">AI Agent Guide</a>
             </div>
         </div>
     </div>
@@ -27,69 +28,69 @@ title: "AI Agent Framework for Code Simplification"
     <h2 class="text-xl font-semibold text-gray-900 mb-6">AI Agent Examples</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Code Simplification -->
-        <div class="border border-gray-200 rounded-lg p-4">
-            <h3 class="font-semibold text-gray-900 mb-2">🧹 Code Simplification</h3>
-            <div class="bg-gray-50 text-sm font-mono p-3 rounded mb-3">
-                <div class="text-blue-600">Prompt:</div>
-                <div class="text-gray-700">"Use merciless-simplification methodology to clean up our React components. Focus on eliminating single-use components (Pattern 7) and wrapper elimination (Pattern 8)."</div>
+        <div class="border border-red-200 rounded-lg p-4 bg-red-50">
+            <h3 class="font-semibold text-gray-900 mb-2">⚔️ Merciless Code Cleanup</h3>
+            <div class="bg-gray-800 text-green-400 text-sm font-mono p-3 rounded mb-3">
+                <div class="text-red-400">Command:</div>
+                <div class="text-gray-200">"Apply merciless simplification to ruthlessly eliminate bloat from our React components. Focus on single-use component elimination (Pattern 7) and wrapper destruction (Pattern 8). Show no mercy to unnecessary complexity."</div>
             </div>
-            <p class="text-xs text-gray-600">AI agent systematically applies specific patterns with safety verification</p>
+            <p class="text-xs text-gray-600">AI agent systematically destroys complexity with surgical precision</p>
         </div>
 
         <!-- Feature Implementation -->
         <div class="border border-gray-200 rounded-lg p-4">
-            <h3 class="font-semibold text-gray-900 mb-2">⚡ Feature Implementation</h3>
+            <h3 class="font-semibold text-gray-900 mb-2">⚡ Simplification-First Features</h3>
             <div class="bg-gray-50 text-sm font-mono p-3 rounded mb-3">
-                <div class="text-blue-600">Prompt:</div>
-                <div class="text-gray-700">"Implement user authentication using simplification-first development from the framework. Build minimal viable complexity."</div>
+                <div class="text-blue-600">Command:</div>
+                <div class="text-gray-700">"Implement user authentication with merciless simplification principles. Build only what's essential - eliminate over-engineering before it starts."</div>
             </div>
-            <p class="text-xs text-gray-600">AI agent builds features without over-engineering from the start</p>
+            <p class="text-xs text-gray-600">AI agent builds features lean and mean from day one</p>
         </div>
 
         <!-- Code Review -->
         <div class="border border-gray-200 rounded-lg p-4">
-            <h3 class="font-semibold text-gray-900 mb-2">🔍 Code Review</h3>
+            <h3 class="font-semibold text-gray-900 mb-2">🔍 Ruthless Code Review</h3>
             <div class="bg-gray-50 text-sm font-mono p-3 rounded mb-3">
-                <div class="text-blue-600">Prompt:</div>
-                <div class="text-gray-700">"Review this PR using the simplification decision framework. Apply the simplification filter to identify what can be eliminated."</div>
+                <div class="text-blue-600">Command:</div>
+                <div class="text-gray-700">"Mercilessly review this PR using the simplification filter. Identify every piece of unnecessary complexity for elimination."</div>
             </div>
-            <p class="text-xs text-gray-600">AI agent provides structured feedback based on proven criteria</p>
+            <p class="text-xs text-gray-600">AI agent provides brutal but accurate feedback on what must go</p>
         </div>
 
         <!-- Legacy Cleanup -->
         <div class="border border-gray-200 rounded-lg p-4">
-            <h3 class="font-semibold text-gray-900 mb-2">🛡️ Legacy Cleanup</h3>
+            <h3 class="font-semibold text-gray-900 mb-2">🛡️ Conservative Legacy Assault</h3>
             <div class="bg-gray-50 text-sm font-mono p-3 rounded mb-3">
-                <div class="text-blue-600">Prompt:</div>
-                <div class="text-gray-700">"Apply risk mitigation strategies to this legacy codebase. Use micro-tickets approach with conservative elimination."</div>
+                <div class="text-blue-600">Command:</div>
+                <div class="text-gray-700">"Apply merciless simplification to this legacy codebase with maximum safety. Use micro-tickets to systematically eliminate complexity without breaking production."</div>
             </div>
-            <p class="text-xs text-gray-600">AI agent handles dangerous legacy code with built-in safety measures</p>
+            <p class="text-xs text-gray-600">AI agent attacks legacy complexity with built-in safety protocols</p>
         </div>
     </div>
 </div>
 
 <!-- Why This Works -->
-<div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
-    <h2 class="text-xl font-semibold text-gray-900 mb-4">Why AI Agents Need This Framework</h2>
+<div class="bg-gray-900 text-white rounded-lg p-6 mb-8">
+    <h2 class="text-xl font-semibold mb-4">Why AI Agents Need Merciless Simplification</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
         <div>
-            <h3 class="font-medium text-gray-900 mb-2">❌ Without Framework</h3>
-            <ul class="text-gray-600 space-y-1">
-                <li>• Random refactoring decisions</li>
-                <li>• No safety verification</li>
-                <li>• Inconsistent results</li>
-                <li>• Risk of breaking functionality</li>
+            <h3 class="font-medium text-red-400 mb-2">❌ Weak AI Refactoring</h3>
+            <ul class="text-gray-300 space-y-1">
+                <li>• Random, inconsistent decisions</li>
+                <li>• No systematic approach</li>
+                <li>• Breaks things unpredictably</li>
                 <li>• No measurable outcomes</li>
+                <li>• Timid, surface-level changes</li>
             </ul>
         </div>
         <div>
-            <h3 class="font-medium text-gray-900 mb-2">✅ With Framework</h3>
-            <ul class="text-gray-600 space-y-1">
-                <li>• Systematic decision criteria</li>
-                <li>• Built-in risk mitigation</li>
-                <li>• Reproducible methodology</li>
-                <li>• Verified functionality preservation</li>
-                <li>• Quantified improvements</li>
+            <h3 class="font-medium text-green-400 mb-2">⚔️ Merciless AI Simplification</h3>
+            <ul class="text-gray-300 space-y-1">
+                <li>• Systematic elimination criteria</li>
+                <li>• Proven patterns and safety</li>
+                <li>• Ruthless but controlled</li>
+                <li>• Quantified complexity reduction</li>
+                <li>• Deep, structural improvements</li>
             </ul>
         </div>
     </div>
