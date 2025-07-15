@@ -134,6 +134,27 @@ Annual ROI = (Maintenance Hours Saved × Developer Cost) / Time Investment
 Typical ROI: 300-800% in first year
 ```
 
+## 🖥️ Local Development
+
+To run this website locally:
+
+```bash
+# Clone the repository  
+gh repo clone mfenderov/merciless-simplification
+cd merciless-simplification
+
+# Install Hugo (macOS)
+brew install hugo
+
+# Run development server
+hugo server
+
+# Or build static site
+hugo build
+```
+
+The site will be available at `http://localhost:1313/merciless-simplification/`
+
 ## 🤝 Contributing
 
 This methodology improves through real-world application. Share your:
