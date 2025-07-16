@@ -1,6 +1,71 @@
-# Common Simplification Patterns
+---
+title: "Simplification Patterns"
+description: "Proven patterns for simplifying different types of code complexity, with real examples and anti-patterns to avoid."
+---
+
+### Simplification Patterns
 
 > **Purpose**: Proven patterns for simplifying different types of code complexity, with real examples and anti-patterns to avoid.
+
+## Code Smell Detection Framework
+
+Replace subjective "value" judgments with objective **code smell identification**:
+
+### Dead Code 💀
+**Objective Detection:**
+- Functions/methods with zero references
+- Unused imports and variables  
+- Commented-out code blocks
+- Unreachable code paths
+
+**Elimination Pattern:**
+```bash
+# Find unused functions (example for Go)
+grep -r "func.*(" . | grep -v "_test.go" | while read line; do
+  func_name=$(echo "$line" | sed 's/.*func \([^(]*\).*/\1/')
+  if [ $(grep -r "$func_name" . --exclude="*.git*" | wc -l) -eq 1 ]; then
+    echo "Unused: $line"
+  fi
+done
+```
+
+### Speculative Generality 🔮
+**Objective Detection:**
+- Abstract classes with single implementation
+- Interfaces with single implementer (except for testing)
+- Generic types used in only one way
+- Configuration options never used
+
+**Elimination Pattern:**
+- Inline single-use abstractions
+- Replace generic types with concrete implementations
+- Remove unused configuration parameters
+
+### Duplicate Code 👥
+**Objective Detection:**
+- Functions with >80% similar structure
+- Copy-pasted code blocks
+- Nearly identical test cases
+- Redundant documentation sections
+
+**Elimination Pattern:**
+- Extract common functionality
+- Create shared utilities
+- Consolidate similar test cases
+- Merge redundant documentation
+
+### Large Class/Method 📏
+**Objective Detection:**
+- Methods >50 lines (language-dependent)
+- Classes >500 lines
+- Functions with >7 parameters
+- Cyclomatic complexity >10
+
+**Elimination Pattern:**
+- Extract smaller methods
+- Split large classes by responsibility
+- Use parameter objects
+- Break complex conditionals
 
 ## Test Simplification Patterns
 

@@ -1,4 +1,10 @@
-# "Merciless Simplification" Methodology
+---
+layout: default
+title: "Core Methodology"
+description: "Comprehensive methodology for systematically eliminating code complexity using proven filter and micro-ticket approach."
+---
+
+### Core Methodology
 
 > **Core Principle**: Keep what provides value, eliminate what doesn't. Every line of code, every test, every piece of documentation must justify its existence.
 
@@ -13,7 +19,9 @@ Most codebases accumulate complexity over time:
 - **API bloat** with convenience functions that provide minimal benefit
 
 ### The Solution: Merciless Simplification
-Systematic elimination of complexity using a proven filter and micro-ticket approach.
+Systematic elimination of complexity using proven practices: **Test-Driven Development**, **Tidy First** preparatory refactoring, and focused micro-ticket execution.
+
+**Foundational Insight**: Following Kent Beck's "Tidy First?" principle - separate structure changes from behavior changes. Make code easier to change *before* making changes.
 
 **Results**: 20-40% complexity reduction while preserving 100% functionality and improving maintainability.
 
@@ -36,15 +44,36 @@ Every component must pass this test:
 - Measures edge cases that don't occur in real usage
 - Adds cognitive overhead without corresponding benefit
 
-### 2. Micro-Ticket Methodology
-Break simplification into **5-15 minute focused tasks**:
+### 2. Test-Driven Simplification
+Adapt the **Red-Green-Refactor** cycle for safe complexity elimination:
+
+**Red** → Write characterization test that captures current behavior  
+**Green** → Simplify code while keeping test passing  
+**Refactor** → Further eliminate complexity with confidence  
+
+**Example Workflow:**
+```
+1. Write test documenting complex component's behavior
+2. Simplify implementation (inline functions, remove abstractions)  
+3. Verify test stays green throughout changes
+4. Refactor for additional clarity
+```
+
+**Benefits:**
+- **Safety net**: Tests prevent functionality loss during simplification
+- **Confidence**: Green tests validate each simplification step
+- **Documentation**: Tests capture what complexity actually does
+- **Reversibility**: Easy rollback if simplification breaks behavior
+
+### 3. Micro-Ticket Methodology
+Break simplification into **bite-sized focused tasks**:
 - **Lower risk**: Easy to revert small changes
 - **Better focus**: Single responsibility per ticket
 - **Immediate feedback**: Test and verify each change
 - **Sustainable pace**: Fits into any development session
 - **Clear progress**: Tangible completion of many small improvements
 
-### 3. Quality Gates
+### 4. Quality Gates
 Every change must:
 - Preserve 100% functionality (all tests pass)
 - Maintain or improve performance
@@ -54,7 +83,7 @@ Every change must:
 
 ## The Process
 
-### Phase 1: Project Analysis (30-45 minutes)
+### Phase 1: Project Analysis (Deep dive)
 1. **Inventory Assessment**
    - Count test files, documentation files, source files
    - Measure lines of code, complexity metrics
@@ -71,21 +100,31 @@ Every change must:
    - Medium impact: API surface and code structure
    - Low impact: Minor optimizations and cleanup
 
-### Phase 2: Micro-Ticket Creation (15-30 minutes)
-Break work into focused 5-15 minute tasks:
+### Phase 2: Preparatory Refactoring (Setup phase)
+Following "Tidy First?" methodology, prepare code for simplification:
+- **Dependency untangling**: Make components easier to remove
+- **Interface clarification**: Expose what each component actually does
+- **Test establishment**: Create safety nets before major changes
+- **Documentation cleanup**: Clarify current behavior before changing it
+
+**Economic Rationale**: Small preparatory changes make subsequent simplification faster and safer.
+
+### Phase 3: Micro-Ticket Creation (Planning phase)
+Break work into focused bite-sized tasks:
 - **Analysis tickets**: Understand current state
+- **Preparatory tickets**: Tidy first before major changes
 - **Consolidation tickets**: Merge similar components
 - **Elimination tickets**: Remove unnecessary complexity
 - **Verification tickets**: Ensure nothing broke
 
-### Phase 3: Systematic Execution (Variable)
+### Phase 4: Systematic Execution (Variable)
 Execute micro-tickets with discipline:
 - Work on one ticket at a time
 - Test immediately after each change
 - Commit after each completed ticket
 - Document what was changed and why
 
-### Phase 4: Impact Measurement (15 minutes)
+### Phase 5: Impact Measurement (Results check)
 Quantify the results:
 - Lines of code eliminated
 - Files consolidated
@@ -130,10 +169,11 @@ Quantify the results:
 - Easy rollback if any issues arise
 
 ### Testing Strategy
-- Run full test suite after each major change
-- Verify examples and documentation still work
-- Check that all functionality is preserved
-- Measure performance to ensure no regressions
+- **Test-first approach**: Write characterization tests before simplifying
+- **Continuous verification**: Keep tests green throughout changes
+- **Comprehensive coverage**: Run full test suite after each major change
+- **Documentation validation**: Verify examples and documentation still work
+- **Performance monitoring**: Measure performance to ensure no regressions
 
 ### Quality Checkpoints
 - After each phase, verify the system still works completely
@@ -188,7 +228,7 @@ Applied to the konfig Go configuration library with these results:
 ## Getting Started
 
 1. **Choose a project** with moderate complexity (not too simple, not overwhelmingly complex)
-2. **Set aside 2-4 hours** for systematic application
+2. **Block focused time** for systematic application
 3. **Create a feature branch** for all simplification work
 4. **Start with Phase 1** analysis to understand current state
 5. **Apply the filter mercilessly** - question everything

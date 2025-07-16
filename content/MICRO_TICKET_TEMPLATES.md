@@ -1,6 +1,11 @@
-# Micro-Ticket Templates for Merciless Simplification
+---
+title: "Micro-Ticket Templates"
+description: "Ready-to-use templates for breaking simplification work into lightning-fast tasks with immediate, testable results."
+---
 
-> **Philosophy**: Every simplification task should be completable in 5-15 minutes with immediate, testable results.
+### Micro-Ticket Templates
+
+> **Philosophy**: Every simplification task should be lightning-fast with immediate, testable results.
 
 ## Template Structure
 
@@ -9,7 +14,7 @@
 ```markdown
 ## [MICRO-XXX] Brief Description of Change
 
-**Estimated Time:** 5-15 minutes  
+**Effort Level:** Lightning-fast  
 **Type:** [analysis|consolidation|elimination|verification|cleanup]  
 **Dependencies:** [List of previous micro-ticket IDs or "None"]  
 **Priority:** [high|medium|low]
@@ -44,12 +49,12 @@ Brief description of what complexity needs to be addressed.
 
 ### 1. Analysis Tickets
 **Purpose**: Understand current state and identify targets  
-**Time Range**: 10-15 minutes  
+**Effort Level**: Quick win  
 
 ```markdown
 ## [MICRO-001] Analyze Test File Complexity
 
-**Estimated Time:** 15 minutes  
+**Effort Level:** Quick win  
 **Type:** analysis  
 **Dependencies:** None  
 
@@ -81,12 +86,12 @@ Need to understand current test structure to identify consolidation opportunitie
 
 ### 2. Consolidation Tickets
 **Purpose**: Merge similar or related components  
-**Time Range**: 10-15 minutes  
+**Effort Level**: Quick win  
 
 ```markdown
 ## [MICRO-002] Consolidate Basic Test Files
 
-**Estimated Time:** 12 minutes  
+**Effort Level:** Lightning-fast  
 **Type:** consolidation  
 **Dependencies:** MICRO-001  
 
@@ -119,12 +124,12 @@ Multiple test files test similar basic functionality and can be merged.
 
 ### 3. Elimination Tickets  
 **Purpose**: Remove unnecessary complexity  
-**Time Range**: 5-12 minutes  
+**Effort Level**: Lightning-fast  
 
 ```markdown
 ## [MICRO-003] Remove Over-Engineered Benchmark Tests
 
-**Estimated Time:** 10 minutes  
+**Effort Level:** Lightning-fast  
 **Type:** elimination  
 **Dependencies:** MICRO-001  
 
@@ -156,12 +161,12 @@ Benchmark tests for edge cases that don't occur in real usage add maintenance ov
 
 ### 4. Verification Tickets
 **Purpose**: Ensure changes work correctly  
-**Time Range**: 5-8 minutes  
+**Effort Level**: Lightning-fast  
 
 ```markdown
 ## [MICRO-004] Verify Test Consolidation Success
 
-**Estimated Time:** 8 minutes  
+**Effort Level:** Lightning-fast  
 **Type:** verification  
 **Dependencies:** MICRO-002, MICRO-003  
 
@@ -196,12 +201,12 @@ Need to verify that test consolidation preserved all functionality without regre
 
 ### 5. Cleanup Tickets
 **Purpose**: Tidy up after major changes  
-**Time Range**: 5-10 minutes  
+**Effort Level**: Lightning-fast  
 
 ```markdown
 ## [MICRO-005] Update Documentation After Simplification
 
-**Estimated Time:** 8 minutes  
+**Effort Level:** Lightning-fast  
 **Type:** cleanup  
 **Dependencies:** MICRO-004  
 
@@ -236,7 +241,7 @@ Documentation references need updating after test file consolidation.
 ## Micro-Ticket Best Practices
 
 ### Time Management
-- **Set a timer**: Strictly enforce 5-15 minute limits
+- **Keep it snappy**: Maintain lightning-fast execution
 - **Single focus**: One concept per ticket
 - **Complete in one session**: Avoid context switching
 - **Stop at time limit**: Create new ticket if more work needed
@@ -290,14 +295,14 @@ MICRO-011: Update references and links
 ## Measuring Micro-Ticket Success
 
 ### Quantitative Metrics
-- **Completion rate**: >90% of tickets completed within time estimate
+- **Completion rate**: >90% of tickets completed as expected
 - **Functionality preservation**: 100% of tests pass after each ticket
 - **Progress tracking**: Lines/files eliminated per ticket
-- **Time accuracy**: Actual vs estimated time within 25%
+- **Effort accuracy**: Task stayed within expected effort level
 
 ### Qualitative Indicators
 - **Clear progress**: Tangible improvement after each ticket
-- **Sustainable pace**: Can complete tickets in small time windows
+- **Sustainable pace**: Can complete tickets in brief focused sessions
 - **Low stress**: Changes feel safe and reversible
 - **Maintained focus**: Single responsibility per ticket reduces cognitive load
 

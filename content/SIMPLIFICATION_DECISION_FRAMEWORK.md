@@ -1,4 +1,9 @@
-# Simplification Decision Framework
+---
+title: "Decision Framework"
+description: "Systematic decision framework for determining what to keep vs eliminate during codebase simplification using proven criteria."
+---
+
+### Simplification Decision Framework
 
 > **The Golden Rule**: Every line of code, every test, every piece of documentation must justify its existence through real value delivery.
 
@@ -38,6 +43,85 @@
                            |
                       ELIMINATE ❌
 ```
+
+## SOLID Principles as Filters
+
+**Apply SOLID principles to guide simplification decisions objectively:**
+
+### Single Responsibility Principle (SRP)
+**Question**: Does this class/function have a single, well-defined responsibility?
+
+**✅ KEEP if:**
+- Class or function does one thing well
+- Has single reason to change
+- Clear, focused purpose
+
+**❌ ELIMINATE if:**
+- Mixed concerns (e.g., validation + formatting + persistence)
+- Multiple reasons to change
+- Name suggests multiple responsibilities ("ManagerHandlerProcessor")
+
+**Simplification Action**: Split multi-responsibility components or inline trivial single-use ones
+
+### Open/Closed Principle (OCP)
+**Question**: Is this abstraction actually extended, or just speculative?
+
+**✅ KEEP if:**
+- Multiple implementations exist
+- Clear extension points are actively used
+- Abstraction prevents modification when extending
+
+**❌ ELIMINATE if:**
+- Only one implementation exists
+- Abstract interface never extended
+- Over-engineering for hypothetical future needs
+
+**Simplification Action**: Inline single-implementation abstractions
+
+### Liskov Substitution Principle (LSP)
+**Question**: Do subclasses truly substitute for their parents?
+
+**✅ KEEP if:**
+- Subclasses can be used anywhere parent is expected
+- Inheritance represents true "is-a" relationships
+- No surprising behavior in substitutions
+
+**❌ ELIMINATE if:**
+- Subclasses break parent contracts
+- Inheritance used for code reuse only
+- Client code needs to know specific subclass types
+
+**Simplification Action**: Replace false inheritance with composition or eliminate hierarchy
+
+### Interface Segregation Principle (ISP)
+**Question**: Are all interface methods actually used by clients?
+
+**✅ KEEP if:**
+- Clients use all methods in interface
+- Interface represents cohesive functionality
+- No forced implementation of unused methods
+
+**❌ ELIMINATE if:**
+- Clients implement empty methods
+- Large interfaces with unused methods
+- Single interface serving multiple client types
+
+**Simplification Action**: Split large interfaces or inline small single-use ones
+
+### Dependency Inversion Principle (DIP)
+**Question**: Does this abstraction actually decouple high-level from low-level modules?
+
+**✅ KEEP if:**
+- Enables testing with mocks/stubs
+- Allows swapping implementations
+- High-level modules don't depend on concrete details
+
+**❌ ELIMINATE if:**
+- Only one concrete implementation ever exists
+- Abstraction doesn't enable testing
+- No need to swap implementations
+
+**Simplification Action**: Remove unnecessary abstractions and inject concrete dependencies directly
 
 ## Detailed Decision Criteria
 

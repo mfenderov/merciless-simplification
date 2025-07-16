@@ -1,0 +1,39 @@
+baseURL: 'https://mfenderov.github.io/merciless-simplification/'
+languageCode: 'en-us'
+title: 'Merciless Simplification Methodology'
+description: 'Systematic methodology for reducing codebase complexity by 20-40% while maintaining 100% functionality'
+
+params:
+  author: 'Mark Fenderov'
+  twitter: 'mfenderov'
+
+# Menu configuration
+menu:
+  main:
+    - name: 'Home'
+      url: '/'
+      weight: 10
+    - name: 'Complete Guide'
+      url: '/complete-guide/'
+      weight: 20
+    - name: 'Quick Start'
+      url: '/complete-guide/#quick-start'
+      weight: 30
+    - name: 'Patterns'
+      url: '/complete-guide/#proven-patterns'
+      weight: 40
+    - name: 'GitHub'
+      url: 'https://github.com/mfenderov/merciless-simplification'
+      weight: 50
+
+# Markup configuration
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    lineNos: false
+
+# Build configuration
+publishDir: 'public'

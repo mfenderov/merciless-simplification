@@ -1,4 +1,9 @@
-# Project Assessment Templates
+---
+title: "Project Assessment Templates"  
+description: "Ready-to-use templates for systematically assessing different types of projects for simplification opportunities."
+---
+
+### Project Assessment Templates
 
 > **Purpose**: Ready-to-use templates for assessing different types of projects for simplification opportunities.
 

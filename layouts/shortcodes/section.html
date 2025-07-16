@@ -1,0 +1,7 @@
+{{- $pageName := .Get 0 -}}
+{{- $anchor := .Get 1 | default (lower $pageName | replaceRE "[^a-z0-9]+" "-") -}}
+{{- with site.GetPage $pageName -}}
+<section id="{{ $anchor }}">
+{{ .Content }}
+</section>
+{{- end -}}

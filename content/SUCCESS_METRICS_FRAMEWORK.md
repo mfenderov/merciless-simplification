@@ -1,4 +1,9 @@
-# Success Metrics & Measurement Framework
+---
+title: "Success Metrics Framework"
+description: "Comprehensive framework for measuring simplification success across quantitative and qualitative dimensions with practical tools."
+---
+
+### Success Metrics Framework
 
 > **Purpose**: Comprehensive framework for measuring simplification success across quantitative and qualitative dimensions.
 
