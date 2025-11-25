@@ -28,6 +28,24 @@ brew install hugo
 hugo server
 ```
 
+## Documentation Maintenance
+
+**Ultra-Simple Approach:**
+- **One file**: `content/_index.md` contains the complete guide
+- **One command**: `hugo server` to preview locally
+- **One output**: Hugo renders it as the website
+
+**Making Changes:**
+1. Edit `content/_index.md`
+2. Commit your changes
+3. Done!
+
+**Why this approach?**
+- Single source of truth - just one file to maintain
+- No build scripts, no complexity
+- AI agents can fetch the complete guide from GitHub or the live site
+- Hugo automatically generates the beautiful website
+
 ## License
 
 Open source and freely available for use, adaptation, and distribution.
