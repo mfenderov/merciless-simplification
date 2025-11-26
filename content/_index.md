@@ -115,9 +115,9 @@ Micro-tickets deliver these five established methodologies through systematic ex
 ```
 1. TEST-FIRST-001: Write characterization test for AuthManager
 2. Verify test passes (documents current behavior)
-3. SIMPLIFY-001: Inline single-use validateUser function
+3. SIMPLIFY-001: Inline single-use validateUser function (Inline Function)
 4. Verify test still passes (behavior preserved)
-5. Commit: "SIMPLIFY-001: Inline validateUser (Fowler p.115)"
+5. Commit: "SIMPLIFY-001: Inline validateUser"
 ```
 
 **Safety Benefits**:
@@ -155,18 +155,18 @@ Apply in priority order through micro-tickets:
 
 ### Most-Used Fowler Refactorings → Micro-Ticket Mapping
 
-| Refactoring | Page | When to Use | Ticket Type | Example |
-|-------------|------|-------------|-------------|---------|
-| **Extract Function** | 106 | Complex method needs clarification before simplification | TIDY | "TIDY-001: Extract validateInput (Fowler p.106)" |
-| **Inline Function** | 115 | Function provides no semantic value | SIMPLIFY | "SIMPLIFY-001: Inline getUserName (Fowler p.115)" |
-| **Extract Variable** | 119 | Complex expression obscures intent | TIDY | "TIDY-001: Extract isValidUser (Fowler p.119)" |
-| **Inline Variable** | 123 | Variable adds no clarity | SIMPLIFY | "SIMPLIFY-001: Inline temp (Fowler p.123)" |
-| **Change Function Declaration** | 124 | Function name doesn't reveal intent | TIDY | "TIDY-001: Rename processData to validateUserInput (Fowler p.124)" |
-| **Rename Variable** | 137 | Variable name unclear or misleading | TIDY | "TIDY-001: Rename tmp to validatedUser (Fowler p.137)" |
-| **Move Function** | 198 | Function in wrong module/class | CONSOLIDATE | "CONSOLIDATE-001: Move formatDate to DateUtils (Fowler p.198)" |
-| **Remove Dead Code** | 237 | Code never called | SIMPLIFY | "SIMPLIFY-001: Remove unused exportToCSV (Fowler p.237)" |
-| **Collapse Hierarchy** | 380 | Subclass adds no value | SIMPLIFY | "SIMPLIFY-001: Collapse UserBase into User (Fowler p.380)" |
-| **Inline Class** | 186 | Class too small to justify existence | SIMPLIFY | "SIMPLIFY-001: Inline PersonAddress into Person (Fowler p.186)" |
+| Refactoring | When to Use | Ticket Type | Example |
+|-------------|-------------|-------------|---------|
+| **Extract Function** | Complex method needs clarification before simplification | TIDY | "TIDY-001: Extract validateInput" |
+| **Inline Function** | Function provides no semantic value | SIMPLIFY | "SIMPLIFY-001: Inline getUserName" |
+| **Extract Variable** | Complex expression obscures intent | TIDY | "TIDY-001: Extract isValidUser" |
+| **Inline Variable** | Variable adds no clarity | SIMPLIFY | "SIMPLIFY-001: Inline temp" |
+| **Change Function Declaration** | Function name doesn't reveal intent | TIDY | "TIDY-001: Rename processData to validateUserInput" |
+| **Rename Variable** | Variable name unclear or misleading | TIDY | "TIDY-001: Rename tmp to validatedUser" |
+| **Move Function** | Function in wrong module/class | CONSOLIDATE | "CONSOLIDATE-001: Move formatDate to DateUtils" |
+| **Remove Dead Code** | Code never called | SIMPLIFY | "SIMPLIFY-001: Remove unused exportToCSV" |
+| **Collapse Hierarchy** | Subclass adds no value | SIMPLIFY | "SIMPLIFY-001: Collapse UserBase into User" |
+| **Inline Class** | Class too small to justify existence | SIMPLIFY | "SIMPLIFY-001: Inline PersonAddress into Person" |
 
 ## 5. Tidy First (Kent Beck)
 
@@ -184,12 +184,12 @@ Apply in priority order through micro-tickets:
 
 | Tidy First (Beck) | Refactoring (Fowler) | Micro-Ticket Type | Example |
 |-------------------|---------------------|-------------------|---------|
-| Guard Clauses | Replace Nested Conditional with Guard Clauses (p.266) | TIDY | Remove deep nesting before simplification |
-| Dead Code | Remove Dead Code (p.237) | SIMPLIFY | Delete unused before refactoring |
-| Normalize Symmetries | Consolidate Duplicate Conditional Fragments (p.260) | CONSOLIDATE | Merge similar patterns |
-| Explanatory Variables | Extract Variable (p.119) | TIDY | Clarify complex expressions |
-| Reading Order | Move Statements (p.223) | TIDY | Group related code |
-| Cohesion Order | Move Function (p.198) | CONSOLIDATE | Place functions near usage |
+| Guard Clauses | Replace Nested Conditional with Guard Clauses | TIDY | Remove deep nesting before simplification |
+| Dead Code | Remove Dead Code | SIMPLIFY | Delete unused before refactoring |
+| Normalize Symmetries | Consolidate Duplicate Conditional Fragments | CONSOLIDATE | Merge similar patterns |
+| Explanatory Variables | Extract Variable | TIDY | Clarify complex expressions |
+| Reading Order | Move Statements | TIDY | Group related code |
+| Cohesion Order | Move Function | CONSOLIDATE | Place functions near usage |
 
 **Economic Rationale**: Preparatory TIDY tickets feel slow but make SIMPLIFY tickets 3-5x faster and dramatically safer. Beck's warning ("this may be hard") acknowledges this counterintuitive reality.
 
@@ -250,9 +250,9 @@ Exit Criteria:
 ### Template
 
 ```
-TIDY-###: [Preparatory action] (Fowler p.[page])
+TIDY-###: [Preparatory action]
 
-Fowler Refactoring: [Name] (p.[page])
+Fowler Refactoring: [Name]
 Tidy First: [Beck's tiding]
 
 Steps:
@@ -270,14 +270,14 @@ Exit Criteria:
 
 ```
 TIDY-001: Extract validateEmail to clarify before inlining UserValidator
-Fowler Refactoring: Extract Function (p.106)
+Fowler Refactoring: Extract Function
 Tidy First: Explanatory Function
 
 Steps:
 1. Identify email validation logic in UserValidator
 2. Extract to standalone validateEmail function
 3. Run tests to verify behavior unchanged
-4. Commit: "TIDY-001: Extract validateEmail (Fowler p.106)"
+4. Commit: "TIDY-001: Extract validateEmail"
 
 Exit Criteria:
 - Email validation logic extracted
@@ -341,9 +341,9 @@ Exit Criteria:
 ### Template
 
 ```
-SIMPLIFY-###: [Simplification action] (Fowler p.[page])
+SIMPLIFY-###: [Simplification action]
 
-Fowler Refactoring: [Name] (p.[page])
+Fowler Refactoring: [Name]
 Code Smell: [Fowler/Martin smell]
 
 Steps:
@@ -361,7 +361,7 @@ Exit Criteria:
 
 ```
 SIMPLIFY-001: Inline single-use formatUserName function
-Fowler Refactoring: Inline Function (p.115)
+Fowler Refactoring: Inline Function
 Code Smell: Speculative Generality
 
 Steps:
@@ -369,7 +369,7 @@ Steps:
 2. Copy function body to call site
 3. Remove formatUserName function definition
 4. Run tests to verify behavior unchanged
-5. Commit: "SIMPLIFY-001: Inline formatUserName (Fowler p.115)"
+5. Commit: "SIMPLIFY-001: Inline formatUserName"
 
 Exit Criteria:
 - Function inlined at call site
@@ -389,9 +389,9 @@ Exit Criteria:
 ### Template
 
 ```
-CONSOLIDATE-###: Merge [components] (Fowler p.[page])
+CONSOLIDATE-###: Merge [components]
 
-Fowler Refactoring: [Name] (p.[page])
+Fowler Refactoring: [Name]
 Code Smell: Duplicate Code
 
 Steps:
@@ -410,7 +410,7 @@ Exit Criteria:
 
 ```
 CONSOLIDATE-001: Merge user_basic_test and user_advanced_test
-Fowler Refactoring: Consolidate Duplicate Conditional Fragments (p.260)
+Fowler Refactoring: Consolidate Duplicate Conditional Fragments
 Code Smell: Duplicate Code
 
 Steps:
@@ -419,7 +419,7 @@ Steps:
 3. Remove duplicate helper functions
 4. Delete user_basic_test file
 5. Run full test suite
-6. Commit: "CONSOLIDATE-001: Merge user test files (Fowler p.260)"
+6. Commit: "CONSOLIDATE-001: Merge user test files"
 
 Exit Criteria:
 - All tests from both files preserved
@@ -496,9 +496,9 @@ Each pattern includes:
 
 #### Fowler Refactorings Applied
 
-- **Change Function Declaration** (p.124): Rename tests for consistency
-- **Move Function** (p.198): Move tests between files
-- **Remove Dead Code** (p.237): Delete redundant test utilities
+- **Change Function Declaration**: Rename tests for consistency
+- **Move Function**: Move tests between files
+- **Remove Dead Code**: Delete redundant test utilities
 
 #### Micro-Ticket Sequence
 
@@ -549,8 +549,8 @@ Each pattern includes:
 
 #### Fowler Refactorings Applied
 
-- **Remove Dead Code** (p.237): Delete unrealistic benchmarks
-- **Inline Function** (p.115): Inline single-use benchmark helpers
+- **Remove Dead Code**: Delete unrealistic benchmarks
+- **Inline Function**: Inline single-use benchmark helpers
 
 #### Micro-Ticket Sequence
 
@@ -601,8 +601,8 @@ benchmark_nested_structure()   // 2-3 level nesting - realistic
 
 #### Fowler Refactorings Applied
 
-- **Remove Dead Code** (p.237): Delete framework behavior tests
-- **Extract Function** (p.106): Extract business logic from framework tests
+- **Remove Dead Code**: Delete framework behavior tests
+- **Extract Function**: Extract business logic from framework tests
 
 #### Micro-Ticket Sequence
 
@@ -649,8 +649,8 @@ func TestStructTagMapping(t *testing.T) {
 
 #### Fowler Refactorings Applied
 
-- **Consolidate Duplicate Conditional Fragments** (p.260): Merge similar examples
-- **Extract Function** (p.106): Extract reusable example patterns
+- **Consolidate Duplicate Conditional Fragments**: Merge similar examples
+- **Extract Function**: Extract reusable example patterns
 
 #### Micro-Ticket Sequence
 
@@ -689,8 +689,8 @@ func TestStructTagMapping(t *testing.T) {
 
 #### Fowler Refactorings Applied
 
-- **Move Function** (p.198): Move content to canonical location
-- **Remove Dead Code** (p.237): Delete duplicate explanations
+- **Move Function**: Move content to canonical location
+- **Remove Dead Code**: Delete duplicate explanations
 
 #### Micro-Ticket Sequence
 
@@ -760,8 +760,8 @@ func TestStructTagMapping(t *testing.T) {
 
 #### Fowler Refactorings Applied
 
-- **Inline Class** (p.186): Inline component into usage location
-- **Inline Function** (p.115): Inline component methods
+- **Inline Class**: Inline component into usage location
+- **Inline Function**: Inline component methods
 
 #### Micro-Ticket Sequence
 
@@ -823,8 +823,8 @@ const PersonaSelector = () => {
 
 #### Fowler Refactorings Applied
 
-- **Remove Middle Man** (p.192): Eliminate wrapper, use wrapped component directly
-- **Inline Function** (p.115): Inline trivial wrapper methods
+- **Remove Middle Man**: Eliminate wrapper, use wrapped component directly
+- **Inline Function**: Inline trivial wrapper methods
 
 #### Micro-Ticket Sequence
 
@@ -873,8 +873,8 @@ const ReviewPage = ({ reviewId }) => {
 
 #### Fowler Refactorings Applied
 
-- **Inline Function** (p.115): Inline thin wrappers
-- **Remove Dead Code** (p.237): Delete unused functions
+- **Inline Function**: Inline thin wrappers
+- **Remove Dead Code**: Delete unused functions
 
 #### Micro-Ticket Sequence
 
@@ -917,8 +917,8 @@ func LoadInto(config interface{}) error {
 
 #### Fowler Refactorings Applied
 
-- **Move Function** (p.198): Move config to canonical location
-- **Remove Dead Code** (p.237): Delete redundant config files
+- **Move Function**: Move config to canonical location
+- **Remove Dead Code**: Delete redundant config files
 
 #### Micro-Ticket Sequence
 
@@ -958,8 +958,8 @@ func LoadInto(config interface{}) error {
 
 #### Fowler Refactorings Applied
 
-- **Parameterize Function** (p.310): Create parameterized scripts
-- **Remove Dead Code** (p.237): Delete redundant scripts
+- **Parameterize Function**: Create parameterized scripts
+- **Remove Dead Code**: Delete redundant scripts
 
 #### Micro-Ticket Sequence
 
@@ -1006,46 +1006,46 @@ func LoadInto(config interface{}) error {
 
 ### Goal: Remove Unnecessary Abstractions
 
-| Refactoring | Page | When to Use | Ticket Type |
-|-------------|------|-------------|-------------|
-| **Inline Function** | 115 | Function provides no semantic value | SIMPLIFY |
-| **Inline Class** | 186 | Class does too little | SIMPLIFY |
-| **Inline Variable** | 123 | Variable adds no clarity | SIMPLIFY |
-| **Collapse Hierarchy** | 380 | Subclass adds no value | SIMPLIFY |
-| **Remove Middle Man** | 192 | Wrapper adds no value | SIMPLIFY |
+| Refactoring | When to Use | Ticket Type |
+|-------------|-------------|-------------|
+| **Inline Function** | Function provides no semantic value | SIMPLIFY |
+| **Inline Class** | Class does too little | SIMPLIFY |
+| **Inline Variable** | Variable adds no clarity | SIMPLIFY |
+| **Collapse Hierarchy** | Subclass adds no value | SIMPLIFY |
+| **Remove Middle Man** | Wrapper adds no value | SIMPLIFY |
 
 ### Goal: Consolidate Duplication
 
-| Refactoring | Page | When to Use | Ticket Type |
-|-------------|------|-------------|-------------|
-| **Extract Function** | 106 | Duplicated code fragments | CONSOLIDATE |
-| **Pull Up Method** | 350 | Duplicated methods in subclasses | CONSOLIDATE |
-| **Consolidate Duplicate Conditional Fragments** | 260 | Duplicated conditional logic | CONSOLIDATE |
+| Refactoring | When to Use | Ticket Type |
+|-------------|-------------|-------------|
+| **Extract Function** | Duplicated code fragments | CONSOLIDATE |
+| **Pull Up Method** | Duplicated methods in subclasses | CONSOLIDATE |
+| **Consolidate Duplicate Conditional Fragments** | Duplicated conditional logic | CONSOLIDATE |
 
 ### Goal: Improve Names and Clarity
 
-| Refactoring | Page | When to Use | Ticket Type |
-|-------------|------|-------------|-------------|
-| **Rename Variable** | 137 | Unclear variable names | TIDY |
-| **Change Function Declaration** | 124 | Unclear function names | TIDY |
-| **Rename Field** | 244 | Unclear field names | TIDY |
+| Refactoring | When to Use | Ticket Type |
+|-------------|-------------|-------------|
+| **Rename Variable** | Unclear variable names | TIDY |
+| **Change Function Declaration** | Unclear function names | TIDY |
+| **Rename Field** | Unclear field names | TIDY |
 
 ### Goal: Prepare for Simplification (Tidy First)
 
-| Refactoring | Page | When to Use | Ticket Type |
-|-------------|------|-------------|-------------|
-| **Extract Variable** | 119 | Complex expressions | TIDY |
-| **Extract Function** | 106 | Long methods | TIDY |
-| **Move Statements** | 223 | Related statements scattered | TIDY |
-| **Replace Nested Conditional with Guard Clauses** | 266 | Deep nesting | TIDY |
+| Refactoring | When to Use | Ticket Type |
+|-------------|-------------|-------------|
+| **Extract Variable** | Complex expressions | TIDY |
+| **Extract Function** | Long methods | TIDY |
+| **Move Statements** | Related statements scattered | TIDY |
+| **Replace Nested Conditional with Guard Clauses** | Deep nesting | TIDY |
 
 ### Goal: Eliminate Dead Code
 
-| Refactoring | Page | When to Use | Ticket Type |
-|-------------|------|-------------|-------------|
-| **Remove Dead Code** | 237 | Unused functions/classes | SIMPLIFY |
-| **Remove Setting Method** | 331 | Unused setters | SIMPLIFY |
-| **Remove Parameter** | 313 | Unused parameters | SIMPLIFY |
+| Refactoring | When to Use | Ticket Type |
+|-------------|-------------|-------------|
+| **Remove Dead Code** | Unused functions/classes | SIMPLIFY |
+| **Remove Setting Method** | Unused setters | SIMPLIFY |
+| **Remove Parameter** | Unused parameters | SIMPLIFY |
 
 ---
 
@@ -1089,10 +1089,10 @@ func LoadInto(config interface{}) error {
 Execute TIDY tickets to make simplification easy:
 
 **Actions**:
-- Extract Variable/Function for clarity (Fowler p.106, p.119)
-- Rename for intent revelation (Fowler p.124, p.137)
-- Move for cohesion (Fowler p.198, p.223)
-- Guard Clauses for simplicity (Fowler p.266)
+- Extract Variable/Function for clarity
+- Rename for intent revelation
+- Move for cohesion
+- Guard Clauses for simplicity
 
 ## Phase 3: Test-First Safety Nets
 
@@ -1133,7 +1133,7 @@ Execute VERIFY tickets after changes:
 
 **Good**:
 ```
-SIMPLIFY-001: Inline getUserName (Fowler p.115)
+SIMPLIFY-001: Inline getUserName (Inline Function)
 ```
 
 **Bad**:
@@ -1327,46 +1327,46 @@ Update after each ticket:
 | Type | Complexity | Purpose | Fowler Refactorings | Output |
 |------|------------|---------|---------------------|--------|
 | **ANALYSIS** | Low | Understand before changing | None (investigation) | Documented state, identified smells |
-| **TIDY** | Low-Medium | Prepare for simplification | Extract Variable (p.119), Rename (p.137), Extract Function (p.106) | Clearer structure |
+| **TIDY** | Low-Medium | Prepare for simplification | Extract Variable, Rename, Extract Function | Clearer structure |
 | **TEST-FIRST** | Medium | Create safety net | None (test writing) | Characterization tests (green) |
-| **SIMPLIFY** | Medium | Eliminate complexity | Inline Function (p.115), Remove Dead Code (p.237), Inline Class (p.186) | Simpler code |
-| **CONSOLIDATE** | Medium-High | Merge duplicates | Move Function (p.198), Consolidate Duplicates (p.260), Pull Up Method (p.350) | Less duplication |
+| **SIMPLIFY** | Medium | Eliminate complexity | Inline Function, Remove Dead Code, Inline Class | Simpler code |
+| **CONSOLIDATE** | Medium-High | Merge duplicates | Move Function, Consolidate Duplicates, Pull Up Method | Less duplication |
 | **VERIFY** | Low | Confirm preservation | None (test execution) | All tests green |
 
 ## Most-Used Fowler Refactorings
 
-| Refactoring | Page | Use When | Ticket Type | Example Commit |
-|-------------|------|----------|-------------|----------------|
-| **Inline Function** | 115 | Function provides no semantic value | SIMPLIFY | "SIMPLIFY-001: Inline getUserName (Fowler p.115)" |
-| **Extract Function** | 106 | Complex method needs clarification | TIDY | "TIDY-001: Extract validateInput (Fowler p.106)" |
-| **Remove Dead Code** | 237 | Code never called | SIMPLIFY | "SIMPLIFY-002: Remove unused exportToCSV (Fowler p.237)" |
-| **Move Function** | 198 | Function in wrong module | CONSOLIDATE | "CONSOLIDATE-001: Move formatDate to DateUtils (Fowler p.198)" |
-| **Rename Variable** | 137 | Unclear name | TIDY | "TIDY-002: Rename tmp to validatedUser (Fowler p.137)" |
-| **Extract Variable** | 119 | Complex expression | TIDY | "TIDY-003: Extract isValidUser (Fowler p.119)" |
-| **Inline Class** | 186 | Class too small | SIMPLIFY | "SIMPLIFY-003: Inline PersonAddress (Fowler p.186)" |
-| **Consolidate Duplicates** | 260 | Duplicate conditional logic | CONSOLIDATE | "CONSOLIDATE-002: Merge validation checks (Fowler p.260)" |
+| Refactoring | Use When | Ticket Type | Example Commit |
+|-------------|----------|-------------|----------------|
+| **Inline Function** | Function provides no semantic value | SIMPLIFY | "SIMPLIFY-001: Inline getUserName" |
+| **Extract Function** | Complex method needs clarification | TIDY | "TIDY-001: Extract validateInput" |
+| **Remove Dead Code** | Code never called | SIMPLIFY | "SIMPLIFY-002: Remove unused exportToCSV" |
+| **Move Function** | Function in wrong module | CONSOLIDATE | "CONSOLIDATE-001: Move formatDate to DateUtils" |
+| **Rename Variable** | Unclear name | TIDY | "TIDY-002: Rename tmp to validatedUser" |
+| **Extract Variable** | Complex expression | TIDY | "TIDY-003: Extract isValidUser" |
+| **Inline Class** | Class too small | SIMPLIFY | "SIMPLIFY-003: Inline PersonAddress" |
+| **Consolidate Duplicates** | Duplicate conditional logic | CONSOLIDATE | "CONSOLIDATE-002: Merge validation checks" |
 
 ## Code Smells → Actions
 
 | Smell | Detection | Action | Pattern |
 |-------|-----------|--------|---------|
-| **Speculative Generality** 🔮 | Abstract class with single implementation | SIMPLIFY ticket: Inline Class (p.186) | 7, 9 |
-| **Duplicate Code** 👥 | Functions with very similar structure | CONSOLIDATE ticket: Extract Function (p.106) | 1, 4, 5 |
-| **Dead Code** 💀 | Functions with zero references | SIMPLIFY ticket: Remove Dead Code (p.237) | 9 |
-| **Large Class/Method** 📏 | Methods or classes difficult to understand at a glance | TIDY ticket: Extract Function (p.106) | Multiple |
-| **Middle Man** 🔗 | Wrapper adding no value | SIMPLIFY ticket: Remove Middle Man (p.192) | 8 |
+| **Speculative Generality** 🔮 | Abstract class with single implementation | SIMPLIFY ticket: Inline Class | 7, 9 |
+| **Duplicate Code** 👥 | Functions with very similar structure | CONSOLIDATE ticket: Extract Function | 1, 4, 5 |
+| **Dead Code** 💀 | Functions with zero references | SIMPLIFY ticket: Remove Dead Code | 9 |
+| **Large Class/Method** 📏 | Methods or classes difficult to understand at a glance | TIDY ticket: Extract Function | Multiple |
+| **Middle Man** 🔗 | Wrapper adding no value | SIMPLIFY ticket: Remove Middle Man | 8 |
 
 ## Commit Message Format
 
 ```
-[TYPE]-[NUMBER]: [Action] [Target] (Fowler p.[PAGE])
+[TYPE]-[NUMBER]: [Action] [Target]
 ```
 
 **Examples**:
 ```
-SIMPLIFY-001: Inline formatUserName function (Fowler p.115)
-CONSOLIDATE-002: Merge user test files (Fowler p.260)
-TIDY-003: Extract isValidUser variable (Fowler p.119)
+SIMPLIFY-001: Inline formatUserName function
+CONSOLIDATE-002: Merge user test files
+TIDY-003: Extract isValidUser variable
 TEST-FIRST-004: Write characterization test for AuthManager
 VERIFY-005: Verify all changes after consolidation phase
 ```
@@ -1448,6 +1448,7 @@ VERIFY-005: Verify all changes after consolidation phase
 
 **Martin Fowler**:
 - *Refactoring: Improving the Design of Existing Code* (2nd Edition) - Refactoring catalog with mechanics
+- Online catalog: [refactoring.com/catalog](https://refactoring.com/catalog/)
 
 ## What This Methodology Adds
 
