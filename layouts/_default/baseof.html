@@ -206,5 +206,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    document.getElementById('copy-md-link')?.addEventListener('click', function() {
+        const title = '{{ .Site.Title }}';
+        const url = '{{ .Site.BaseURL }}';
+        const markdownLink = '[' + title + '](' + url + ')';
+
+        navigator.clipboard.writeText(markdownLink).then(function() {
+            const tooltip = document.getElementById('copy-tooltip');
+            tooltip.classList.remove('opacity-0');
+            tooltip.classList.add('opacity-100');
+            setTimeout(function() {
+                tooltip.classList.remove('opacity-100');
+                tooltip.classList.add('opacity-0');
+            }, 2000);
+        });
+    });
+    </script>
 </body>
 </html>
