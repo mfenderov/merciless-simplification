@@ -29,14 +29,14 @@ description: "Micro-tickets: The execution vehicle for XP, TDD, Clean Code, Refa
 3. **GENERATE** micro-tickets prioritized by impact/risk
 4. **EXECUTE** tickets one at a time in sequence:
    - ANALYSIS → TIDY → TEST-FIRST → SIMPLIFY/CONSOLIDATE → VERIFY
-5. **COMMIT** after each ticket: `"TYPE-###: Description (Fowler p.###)"`
+5. **COMMIT** after each ticket: `"TYPE-###: Description"`
 6. **MEASURE** and report results
 
 ### Quality Gates (Critical)
 
 - ✅ **All tests should pass** after each ticket
 - ✅ **Complete functionality preservation** required
-- ✅ **Cite Fowler refactoring** with page number in every SIMPLIFY/CONSOLIDATE ticket
+- ✅ **Cite Fowler refactoring** by name in every SIMPLIFY/CONSOLIDATE ticket
 - ✅ **Identify code smell** being fixed (Fowler/Martin catalog)
 
 ### Expected Results
@@ -480,7 +480,7 @@ Exit Criteria:
 
 Each pattern includes:
 - Code smells it fixes (Fowler/Martin)
-- Fowler refactorings with page numbers
+- Fowler refactorings applied
 - Micro-ticket sequence
 - Decision criteria
 
@@ -1222,7 +1222,7 @@ Before removing code, verify:
 - Test coverage maintained or improved
 
 **Refactoring Tracking**:
-- Fowler refactorings applied (count by type with page numbers)
+- Fowler refactorings applied (count by type)
 - Most-used refactorings (top 5)
 - TIDY vs SIMPLIFY vs CONSOLIDATE ratio
 
