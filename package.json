@@ -1,0 +1,10 @@
+{
+  "name": "merciless-simplification",
+  "version": "1.0.0",
+  "description": "Merciless Simplification methodology and pi skill: systematic code complexity reduction via micro-tickets",
+  "keywords": ["pi-package", "pi-skill", "refactoring", "simplification", "code-quality", "tdd"],
+  "license": "MIT",
+  "pi": {
+    "skills": ["./skills"]
+  }
+}

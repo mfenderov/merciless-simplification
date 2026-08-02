@@ -1,7 +1,5 @@
----
-title: "Merciless Simplification"
-description: "AI Agent framework for systematic code simplification using micro-tickets"
----
+> Snapshot of content/_index.md — the live source of truth lives there; update both when revising.
+
 
 # Merciless Simplification
 
