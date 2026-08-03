@@ -1,6 +1,6 @@
 {
   "name": "merciless-simplification",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Merciless Simplification pi package: skill + micro extension for systematic code complexity reduction via micro-tickets",
   "keywords": [
     "pi-package",
