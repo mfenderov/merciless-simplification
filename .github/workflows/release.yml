@@ -11,6 +11,7 @@ on:
       - "extensions/**"
       - "skills/**"
       - "content/_index.md"
+      - "README.md"
       - "package.json"
 
 permissions:

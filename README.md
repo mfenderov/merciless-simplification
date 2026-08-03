@@ -35,7 +35,7 @@ Package files: `extensions/merciless-simplification.ts` (command + tool shim), `
 
 **Auto-invocation (Tidy First)**: the extension appends Kent Beck's principle — *make the change easy (this might be hard), then make the easy change* — to every turn's system prompt, so the agent calls `merciless_simplify` before modifying complex code. It also shows a non-blocking nudge when you edit a file over a complexity threshold (default 300 lines; tune with `MERCILESS_SIMPLIFY_COMPLEX_LINES`). The human approval gate always stays in the loop.
 
-**Releases**: a GitHub Action bumps the patch version, tags `vX.Y.Z`, and publishes to npm on every push to `main` touching the methodology, skill, or extension. Publishing to npm requires the `NPM_TOKEN` secret in the repo.
+**Releases**: a GitHub Action bumps the patch version, tags `vX.Y.Z`, and publishes to npm on every push to `main` touching the methodology, skill, extension, or README. Publishing is **tokenless via [npm trusted publishers](https://docs.npmjs.com/trusted-publishers) (OIDC)** — no tokens anywhere, with automatic [provenance attestations](https://docs.npmjs.com/generating-provenance-statements). The npm package is set to *require 2FA and disallow tokens*, so CI is the only publisher.
 
 ## Quick Start
 
@@ -78,6 +78,7 @@ hugo server
 - AI agents can fetch the complete guide from GitHub or the live site
 - Hugo automatically generates the beautiful website
 - Note: `skills/merciless-simplification/references/methodology.md` is a snapshot of `content/_index.md` — update both when revising the methodology
+- Pushing to `main` auto-releases a new version to npm (see Releases above)
 
 ## License
 
