@@ -5,23 +5,35 @@
 
 **👀 [Read the Complete Guide →](https://mfenderov.github.io/merciless-simplification/)**
 
-## Pi Skill
+## Pi Skill + Extension
 
-This repo also ships the methodology as a [pi](https://github.com/earendil-works/pi) skill, installable as a package:
+This repo ships the methodology as a [pi](https://github.com/earendil-works/pi) package — a skill (methodology body) plus a micro extension (commands) — installable from git or npm:
 
 ```bash
+# git install (always in sync with main):
 pi install git:github.com/mfenderov/merciless-simplification
-# then, in a pi session:
-/skill:merciless-simplification
+
+# npm install (released versions, auto-updated with pi update --extensions):
+pi install npm:merciless-simplification
+```
+
+Then, in a pi session:
+
+```
+/merciless-simplify [targets...]   # run the methodology (analyze -> tickets -> approval -> execute)
+/skill:merciless-simplification     # load the skill directly
 ```
 
 Or load it directly from a local checkout without installing:
 
 ```bash
 pi --skill ./skills/merciless-simplification
+pi -e ./extensions/merciless-simplification.ts
 ```
 
-Skill files: `skills/merciless-simplification/` (SKILL.md wrapper + references/methodology.md snapshot).
+Package files: `extensions/merciless-simplification.ts` (command + tool shim), `skills/merciless-simplification/` (SKILL.md wrapper + references/methodology.md snapshot).
+
+**Releases**: a GitHub Action bumps the patch version, tags `vX.Y.Z`, and publishes to npm on every push to `main` touching the methodology, skill, or extension. Publishing to npm requires the `NPM_TOKEN` secret in the repo.
 
 ## Quick Start
 
