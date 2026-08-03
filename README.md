@@ -33,6 +33,8 @@ pi -e ./extensions/merciless-simplification.ts
 
 Package files: `extensions/merciless-simplification.ts` (command + tool shim), `skills/merciless-simplification/` (SKILL.md wrapper + references/methodology.md snapshot).
 
+**Auto-invocation (Tidy First)**: the extension appends Kent Beck's principle — *make the change easy (this might be hard), then make the easy change* — to every turn's system prompt, so the agent calls `merciless_simplify` before modifying complex code. It also shows a non-blocking nudge when you edit a file over a complexity threshold (default 300 lines; tune with `MERCILESS_SIMPLIFY_COMPLEX_LINES`). The human approval gate always stays in the loop.
+
 **Releases**: a GitHub Action bumps the patch version, tags `vX.Y.Z`, and publishes to npm on every push to `main` touching the methodology, skill, or extension. Publishing to npm requires the `NPM_TOKEN` secret in the repo.
 
 ## Quick Start
