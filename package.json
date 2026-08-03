@@ -1,12 +1,27 @@
 {
   "name": "merciless-simplification",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Merciless Simplification pi package: skill + micro extension for systematic code complexity reduction via micro-tickets",
-  "keywords": ["pi-package", "pi-extension", "pi-skill", "refactoring", "simplification", "code-quality", "tdd"],
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi-skill",
+    "refactoring",
+    "simplification",
+    "code-quality",
+    "tdd"
+  ],
   "license": "MIT",
-  "files": ["extensions", "skills"],
+  "files": [
+    "extensions",
+    "skills"
+  ],
   "pi": {
-    "extensions": ["./extensions"],
-    "skills": ["./skills"]
+    "extensions": [
+      "./extensions"
+    ],
+    "skills": [
+      "./skills"
+    ]
   }
 }
