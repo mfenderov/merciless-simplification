@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write
 
 jobs:
   release:
@@ -25,7 +26,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           registry-url: "https://registry.npmjs.org"
 
       - name: Bump patch version
@@ -43,12 +44,8 @@ jobs:
           git push origin HEAD:main
           git push origin "v${VERSION}"
 
+      # Tokenless publish via npm trusted publishers (OIDC). Requires the
+      # trusted publisher configured on npmjs.com for this repo + release.yml;
+      # provenance attestations are generated automatically.
       - name: Publish to npm
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          if [ -z "$NODE_AUTH_TOKEN" ]; then
-            echo "NPM_TOKEN not configured — skipping npm publish (tag created anyway)"
-            exit 0
-          fi
-          npm publish --access public
+        run: npm publish --access public
