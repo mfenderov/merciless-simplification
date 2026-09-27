@@ -1,13 +1,13 @@
 ---
 title: "Merciless Simplification"
-description: "AI Agent framework for systematic code simplification using micro-tickets"
+description: "AI Agent standards for clean code and systematic simplification"
 ---
 
 # Merciless Simplification
 
-> **For AI Agents**: Systematic code simplification through micro-ticket execution
+> **For AI Agents**: Standards for writing and refactoring clean code, plus an optional campaign flow for whole-codebase passes
 >
-> **Foundations**: XP + TDD + Clean Code + Refactoring + Tidy First
+> **Foundations**: XP + TDD + Clean Code + Refactoring + Tidy First + SOLID
 >
 > **Goal**: Measurable complexity reduction with zero change to externally observable behavior (as observed by callers and the tests) — always backward compatible, implementation-only changes
 
@@ -23,12 +23,65 @@ Apply merciless simplification methodology from https://mfenderov.github.io/merc
 
 ---
 
+## Layer 1 — Standards (use continuously, on every change)
+
+No tickets, no batches, no approval flow. Process (planning, execution, verification) belongs to the host workflow.
+
+### Standing principles
+
+- **Merciless in ambition, incremental in execution**: always strive for the simplest possible long-term solution — reached one small change at a time. Leave code simpler than you found it.
+- **Small bits only**: never batch refactorings. A single small, verified, committed change is the unit of work.
+- **Risk asymmetry**: a wrong deletion surfaces as a production bug weeks later (expensive); leaving mildly complex code is cheap and reversible. When in doubt on anything touching external behavior, do not change it — record it for human review instead.
+- **Scope classification**: internal implementation changes are the normal path. Public API / service boundary changes are out of scope by default and require explicit human approval.
+- **Write inherently low-CRAP code**: CRAP(m) = comp(m)² × (1 − cov/100)³ + comp(m). Every new or rewritten function should score low by construction — cyclomatic complexity ≤5 through guard clauses and one behavior per function, covered by tests that assert behavior. Measure CRAP to shape new code, never as a pass/fail gate.
+
+### Clean Code essence
+
+- **Names reveal intent**: name the what, not the how. Rename on sight when a name confuses.
+- **Functions do one thing**: one behavior per function, complexity ≤5, guard clauses over nesting, small enough to hold in context at once.
+- **No duplicated knowledge**: every concept has a single source of truth. Tolerate duplication once; extract at the third occurrence — never extract a wrong abstraction early.
+- **Fewest elements**: no speculative generality. Delete anything serving no present need.
+- **Comments explain why, never what**: code carries the what through names and structure. No TODO/FIXME left behind.
+- **Tests assert behavior through public interfaces**: one behavior per test, deterministic, no shared mutable state. If tests are hard to write, the production design is bad — fix the design.
+
+### SOLID
+
+- **SRP — one reason to change**: a module serving two masters splits. When a change pulls in two directions, the boundary is wrong.
+- **OCP — extend, don't edit**: add new behavior through new code (new function, new implementation behind an interface), not by modifying working paths. Branch by abstraction, not by flags scattered through callers.
+- **LSP — substitutes honor the contract**: no strengthened preconditions, no weakened postconditions, no surprising exceptions. If a subtype cannot stand in for its parent everywhere, the hierarchy is wrong — prefer composition.
+- **ISP — small focused interfaces**: 1–3 methods. No client forced to depend on methods it does not use. Split fat interfaces at client boundaries.
+- **DIP — depend on abstractions**: depend on interfaces defined by the consumer (ports), never on concretions. Dependencies point inward: frameworks at the edges, domain at the center. Inner circles know nothing of outer circles.
+
+### Simplification judgment
+
+- **Evidence over naming**: every simplification claim cites concrete evidence (zero references via search, call-site count, identical blocks via diff). Naming a smell is not evidence.
+- **KEEP when**: it solves a real problem, catches real bugs, carries meaning callers rely on (names, API consistency), or enables near-term extension at minimal cost.
+- **ELIMINATE when**: dead (no references), duplicated knowledge, thin wrapper adding no meaning, or built for a hypothetical future. Single call site inlines — unless the name carries meaning callers rely on.
+- **When uncertain, keep**. Record it for human review instead of changing it.
+
+### Preventive habits
+
+- **Tidy first**: make the change easy, then make the easy change. Never mix tidying with behavior changes.
+- **CHARACTERIZE before restructuring untested code**: capture what the code actually does in tests first (success, failure, edge cases as observed) — then judge whether that behavior is desirable.
+
+### Pointers out
+
+- Code smells and refactorings follow the standard literature (Fowler, refactoring.com/catalog). Cite refactorings by name and follow catalog mechanics — do not improvise new transformation shapes.
+
+---
+
+## Layer 2 — Campaign (optional whole-codebase passes)
+
+The host workflow owns process. Use this flow only for standalone simplification campaigns
+run outside feature work. Map its steps onto the host workflow where one exists
+(plan/execute/verify) instead of running two processes.
+
 ## AI Agent Instructions
 
 ### Execute in Order
 
 1. **READ** this complete methodology
-2. **ANALYZE** the codebase for code smells — each smell requires concrete evidence (see Code Smell Detection)
+2. **ANALYZE** the codebase — every claim requires concrete evidence (see Layer 1 Simplification judgment)
 3. **CLASSIFY** the scope of each candidate change: internal implementation vs. public API / service boundary
 4. **GENERATE** micro-tickets prioritized by impact/risk, each with a risk tier
 5. **APPROVAL**: present the ticket batch; the human approves direction and criteria, not every ticket — high-risk tickets (public API, large deletions, core modules) are gated on explicit approval
@@ -63,28 +116,6 @@ Stop when any of these hold:
 Metrics (CRAP score, mutation survival, architecture checks) are diagnostics, not gates — when a measure becomes a target it ceases to be a good measure. Use them to inform the work, never to gate it.
 
 Do not churn. If a ticket's change is uncertain or tests cannot be made green, revert and record why — then move on.
-
----
-
-## Principles
-
-- **Merciless in ambition, incremental in execution**: always strive for the simplest possible long-term solution — reached one small ticket at a time. Boy-scout rule: leave code simpler than you found it.
-- **Small bits only**: never batch refactorings. A single small, verified, committed change is the unit of work.
-- **Risk asymmetry**: a wrong deletion surfaces as a production bug weeks later (expensive); leaving mildly complex code is cheap and reversible. When in doubt on anything touching external behavior, do not change it — record it as a ticket for human review instead.
-- **Scope classification**: internal implementation changes are the normal path. Public API / service boundary changes are out of scope by default and require explicit human approval.
-- **Write inherently low-CRAP code**: CRAP(m) = comp(m)² × (1 − cov/100)³ + comp(m). Every new or rewritten function should score low by construction — cyclomatic complexity ≤5 through guard clauses and one behavior per function, covered by tests that assert behavior. Measure CRAP to shape new code, never as a ticket pass/fail gate.
-
-## Code Smell Detection
-
-Detect these smells to generate micro-tickets. Every ticket must state the concrete evidence for its smell — naming the refactoring is not enough:
-
-| Smell | Detection (concrete evidence required) | Action |
-|-------|----------------------------------------|--------|
-| **Dead Code** | `grep`/`rg` shows zero references | SIMPLIFY: Remove Dead Code |
-| **Duplicate Code** | Identical or near-identical blocks via diff | CONSOLIDATE: Extract Function |
-| **Speculative Generality** | Exactly one call site, no tests reference it | SIMPLIFY: Inline Class/Function |
-| **Middle Man** | Pure delegation, no logic of its own | SIMPLIFY: Remove Middle Man |
-| **Large Class/Method** | Hard to understand at a glance **and** a clear extraction improves it | TIDY: Extract Function |
 
 ---
 
@@ -286,40 +317,9 @@ func StringLength(s string) int {
 
 ## Fowler Refactoring Reference
 
-Full catalog: [refactoring.com/catalog](https://refactoring.com/catalog/)
-
-### Remove Unnecessary Abstractions
-
-| Refactoring | When to Use |
-|-------------|-------------|
-| **Inline Function** | Function provides no semantic value |
-| **Inline Class** | Class does too little |
-| **Collapse Hierarchy** | Subclass adds no value |
-| **Remove Middle Man** | Wrapper adds no value |
-
-### Consolidate Duplication
-
-| Refactoring | When to Use |
-|-------------|-------------|
-| **Extract Function** | Duplicated code fragments |
-| **Pull Up Method** | Duplicated methods in subclasses |
-| **Consolidate Duplicate Conditional Fragments** | Duplicated conditional logic |
-
-### Prepare for Simplification (Tidy First)
-
-| Refactoring | When to Use |
-|-------------|-------------|
-| **Extract Variable** | Complex expressions |
-| **Extract Function** | Long methods |
-| **Rename Variable/Function** | Unclear names |
-| **Replace Nested Conditional with Guard Clauses** | Deep nesting |
-
-### Eliminate Dead Code
-
-| Refactoring | When to Use |
-|-------------|-------------|
-| **Remove Dead Code** | Unused functions/classes |
-| **Remove Parameter** | Unused parameters |
+Standard literature, well known — not listed here. Use the full catalog at
+[refactoring.com/catalog](https://refactoring.com/catalog/):
+cite refactorings by name and follow catalog mechanics.
 
 ---
 
@@ -354,17 +354,11 @@ Complete SIMPLIFY-001 → Commit → Start SIMPLIFY-002
 
 ## Limitations
 
-### Subjectivity in Code Smells
+### Subjectivity in judgment
 
-**More objective** (easier to agree on):
-- Dead code (never called)
-- Duplicate code (identical blocks)
-- Unused imports
-
-**More subjective** (reasonable disagreement):
-- "Speculative Generality" — what counts as "might need someday"?
-- "Large Class" — how large is too large?
-- "Middle Man" — when does a wrapper add value?
+Evidence quality varies: dead code and duplicated blocks are easy to agree on;
+generality, size, and wrapper value admit reasonable disagreement.
+When uncertain, keep — and let the evidence threshold rise with the blast radius.
 
 ### When NOT to Use This Methodology
 
@@ -389,13 +383,14 @@ Results vary based on starting codebase, team experience, and time invested.
 
 **Built on**:
 - **Kent Beck**: XP, TDD, Tidy First
-- **Robert Martin**: Clean Code
+- **Robert Martin**: Clean Code, SOLID, Clean Architecture
 - **Martin Fowler**: Refactoring (2nd Ed) — [refactoring.com/catalog](https://refactoring.com/catalog/)
 
-**What this adds**: Micro-tickets as the execution vehicle that makes these practices actionable for AI agents.
+**What this adds**: always-on standards (Layer 1) distilling these practices into rules an AI agent
+applies on every change, plus an optional campaign flow (Layer 2) for whole-codebase passes.
 
 **Source**: [github.com/mfenderov/merciless-simplification](https://github.com/mfenderov/merciless-simplification)
 
 ---
 
-*Micro-tickets: The execution vehicle for XP, TDD, Clean Code, Refactoring, and Tidy First.*
+*Standards for writing clean code continuously; campaigns for simplifying it periodically.*
