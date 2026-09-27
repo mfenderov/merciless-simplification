@@ -72,6 +72,7 @@ Do not churn. If a ticket's change is uncertain or tests cannot be made green, r
 - **Small bits only**: never batch refactorings. A single small, verified, committed change is the unit of work.
 - **Risk asymmetry**: a wrong deletion surfaces as a production bug weeks later (expensive); leaving mildly complex code is cheap and reversible. When in doubt on anything touching external behavior, do not change it — record it as a ticket for human review instead.
 - **Scope classification**: internal implementation changes are the normal path. Public API / service boundary changes are out of scope by default and require explicit human approval.
+- **Write inherently low-CRAP code**: CRAP(m) = comp(m)² × (1 − cov/100)³ + comp(m). Every new or rewritten function should score low by construction — cyclomatic complexity ≤5 through guard clauses and one behavior per function, covered by tests that assert behavior. Measure CRAP to shape new code, never as a ticket pass/fail gate.
 
 ## Code Smell Detection
 
