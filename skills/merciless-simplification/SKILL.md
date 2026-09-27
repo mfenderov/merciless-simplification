@@ -52,4 +52,5 @@ metrics are diagnostics, not gates. Lines of code and file counts are never succ
 
 ## Full Methodology
 
-See [references/methodology.md](references/methodology.md) for the complete guide.
+Canonical published doc: [mfenderov.github.io/merciless-simplification](https://mfenderov.github.io/merciless-simplification/).
+Local snapshot: [references/methodology.md](references/methodology.md).
